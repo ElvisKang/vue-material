@@ -1,15 +1,14 @@
 <template>
-      <input type="checkbox" :id="id" :class="{'filled-in':filledIn}" :name="name" :checked="checked" :disabled="disabled" />
+      <input type="checkbox" :id="id" :class="{'filled-in':filled}" :name="name" :checked="checked" :disabled="disabled" />
       <label :for="id">{{label}}</label>
 </template>
 
 <script type="babel">
-import {basic} from './mixin.js';
+import {basicAttr,status} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basic],
+    mixins:[basicAttr,status],
     props: {
-            filledIn:Boolean,
-            checked:Boolean
+            filled:Boolean,
         }
 }
 </script>

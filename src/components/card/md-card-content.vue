@@ -1,14 +1,12 @@
 <template>
 <div class="card-content">  
     <slot name="title"></slot>
-    <slot name="content">
-                <p>{{content}}</p>
-    </slot>
+    <p>{{content}}</p>
 </div>
 </template>
 
 <script type="babel">
-import md-card-title from './md-card-title.vue';
+import mdCard from './md-card-'
 export default {
     props:{
         content:String

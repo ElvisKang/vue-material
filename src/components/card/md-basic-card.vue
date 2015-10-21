@@ -8,9 +8,9 @@
 </template>
 
 <script lang="babel">
-import mixin from './mixin.js';
+import {basic} from '../mixins/card-mixin.js';
 export default {
-    mixins:[mixin],
+    mixins:[basic],
     data(){
         return {    
             content:"",

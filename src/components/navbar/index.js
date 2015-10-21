@@ -1,7 +1,11 @@
-import md-nav from './md-nav.vue';
-import md-nav-link from './md-nav-link.vue';
+import mdNav from './md-nav.vue';
+import mdNavLi from './md-nav-li.vue';
+import mdNavLogo from './md-nav-logo.vue';
+import mdNavUl from './md-nav-Ul.vue';
 
 export default {
-    md-nav,
-    md-nav-link
+    mdNav,
+    mdNavLi,
+    mdNavLogo
+    mdNavUl,
 }

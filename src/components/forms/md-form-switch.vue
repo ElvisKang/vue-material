@@ -10,9 +10,9 @@
 </template>
 
 <script type="babel">
-import {basic} from './mixin.js';
+import {basicAttr,status} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basic],
+    mixins:[basicAttr,status],
     props:{
         offText:{
             type:String,

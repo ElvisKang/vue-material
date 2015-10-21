@@ -3,7 +3,7 @@ import mdBtnF from './md-btn-f.vue';
 import mdFab from './md-fab.vue';
 
 export default {
-    normal,
-    floating,
-    fab
+    mdBtn,
+    mdBtnF,
+    mdFab
 }

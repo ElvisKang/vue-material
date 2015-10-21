@@ -1,7 +1,7 @@
 <template>
 <a :class="[flat?'btn-flat':'btn']">
-    <slot  v-if="!flat" name="icon">
-        <md-icon   :icon-text="iconText" :icon-pos="iconPos"></md-icon>
+    <slot  name="icon">
+        <md-icon   v-if="!flat"  :text="iconText" :pos="iconPos"></md-icon>
     </slot>
     {{text}}
 </a>

@@ -9,8 +9,8 @@
 </template>
 
 <script type="babel">
-import {basic,hasIcon} from './mixin.js';
+import {basicAttr,formIcon,status} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basic,hasIcon]
+    mixins:[basicAttr,formIcon,status]
 }
 </script>

@@ -1,7 +1,5 @@
 <template>
 <div class="fixed-action-btn" :style="pos">
-    <slot name="main-icon"></slot>
-    <slot name="sub-icons"></slot>
 </div>
 </template>
 

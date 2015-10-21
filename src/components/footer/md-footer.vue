@@ -4,12 +4,16 @@
             <div class="row">
                 <div class="col l6 s12">
                     <md-footer-content :content="content">
-                        <h5>{{title}}</h5>
+                        <slot name="title">
+                            <h5>{{title}}</h5>
+                        </slot>
                     </md-footer-content>
                 </div>
                <div class="col l4 offset-l2 s12">
                 <md-footer-links :link-list="linkList">
-                    <h5>{{listTitle}}</h5>
+                        <slot name="title">
+                            <h5>{{listTitle}}<title/h5>
+                        </slot>
                 </md-footer-links>
                 </div>
             </div>

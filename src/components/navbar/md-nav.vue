@@ -1,7 +1,7 @@
 <template>
 <nav>
       <div :class="[fixed?'navbar-fixed':'nav-wrapper']">
-        <md-nav-logo >
+        <md-nav-logo :href="logo.href" :text="logo.text" :pos="logo.pos">
             <slot name="logo"></slot>
         </md-nav-logo>
        <slot name="nav-links"> </slot>
@@ -10,29 +10,16 @@
 </template>
 
 <script type="babel">
-import md-nav-link from './md-nav-link.vue';
 export default {
     data() {
         return {
             fixed:false,
-            navLinks:{
-                items:[],
-                pos:'right'
-            }
             logo:{
                 href:"#",
                 pos:"left",
                 text:"Logo"
             }
         }
-    },
-    methods:{
-        isActive(item,index){
-            return false
-        }
-    },
-    components:{
-        md-nav-link
     }
 }
 </script>

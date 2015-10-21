@@ -5,9 +5,9 @@
 </template>
 
 <script type="babel">
-import {basic} from './mixins.js';
+import {basicAttr,status} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basic],
+    mixins:[basicAttr,status],
     props:{
         min:{
             type:Number,

@@ -1,8 +1,8 @@
 export default {
-    hasImg:{
-        props:{
-            imgSrc:String,
-            imgAlt:String
+    hasImg: {
+        props: {
+            imgSrc: String,
+            imgAlt: String
         }
     }
 }

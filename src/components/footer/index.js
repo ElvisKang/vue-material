@@ -1,11 +1,11 @@
-import md-footer from './md-footer.vue';
-import md-footer-content from './md-footer-content.vue';
-import md-footer-copyright from './md-footer-copyright.vue';
-import md-footer-links from './md-footer-links.vue';
+import mdFooter from './md-footer.vue';
+import mdFooterContent from './md-footer-content.vue';
+import mdFooterCopyright from './md-footer-copyright.vue';
+import mdFooterLinks from './md-footer-links.vue';
 
 export default {
-    md-footer,
-    md-footer-content,
-    md-footer-copyright,
-    md-footer-links
+    mdFooter,
+    mdFooterContent,
+    mdFooterCopyright,
+    mdFooterLinks
 }

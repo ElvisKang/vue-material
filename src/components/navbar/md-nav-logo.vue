@@ -1,7 +1,7 @@
 <template>
-<a :href="logo.href" :class="['brand-logo',logo.pos]">
+<a :href="href" :class="['brand-logo',pos]">
     <slot name="logo">
-        {{logo.text}}
+        {{text}}
     </slot>
 </a>
 </template>
@@ -9,7 +9,9 @@
 <script >
 export default {
     props : {
-        logo:Object
+        href:String,
+        text:String,
+        pos:String
     }
 }
 </script>

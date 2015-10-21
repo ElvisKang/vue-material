@@ -11,9 +11,9 @@
 </template>
 
 <script type="babel">
-import {basic} from './mixin.js';
+import {basicAttr} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basic],
+    mixins:[basicAttr],
     porps:{
         multiple:Boolean,
         btnText:{

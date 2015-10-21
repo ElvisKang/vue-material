@@ -4,7 +4,7 @@
     </a>
 </template>
 <script type="babel">
-import {btnIcon} from './mixin.js';
+import {btnIcon} from '../mixins/button-mixin.js';
 export default {
     mixins:[btnIcon]
 }

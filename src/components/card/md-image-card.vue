@@ -1,6 +1,6 @@
 <template>
 <div class="card">
-    <md-card-img  :img="img" >
+    <md-card-img  :img-src="imgSrc" >
         <md-card-title slot="title"  :title-text="title"></md-card-title>
     </md-card-img>
     <md-card-content :content="content"></md-card-content>
@@ -16,7 +16,7 @@ export default {
         return {
             title:"",
             content:"",
-            img:null,
+            imgSrc:"",
             links:null
         }
     }

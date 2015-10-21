@@ -37,6 +37,7 @@ export default {
                 }
             }
         },
+        //mdXxYy=>md-xx-yy
         _camel2dashed(str) {
             const reg = '/([a-zA-Z])(?=[A-Z])/g';
             return str.replace(reg, '$1-').toLowerCase();

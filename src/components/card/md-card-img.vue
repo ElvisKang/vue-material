@@ -6,6 +6,7 @@
 </template>
 
 <script type="babel">
+import {hasImg} from '../mixins/common-mixin.js';
 export default {
     props:{
         reveal:Boolean

@@ -2,7 +2,7 @@
 <div class="footer-copyright">
             <div class="container">
                 {{copyright.content}}
-                <a class="grey-text text-lighten-4 right" :href="copyright.href">{{copyright.linkText}}
+                <a :href="copyright.href">{{copyright.linkText}}
                 </a>
             </div>
  </div> 
@@ -14,5 +14,4 @@ export default {
         copyright:Object
         }
     }
-}
 </script>
