@@ -1,5 +1,5 @@
 <template>
-<div :class="['preloader-wrapper',size,'active']">
+<div :class="['preloader-wrapper','active']">
         <md-circular-item v-for="color in colorsArr" :color="color"></md-circular-item>
   </div>
 </template>
@@ -7,12 +7,7 @@
 <script type="babel">
 import md-circular-item from './md-circular-item.vue';
 export default {
-    data(){
-        return {
-            size:"",
-            colors:[]
-        }
-    },
+    props:['colors'],
     methods:{
         toggleActive(){
             this.active = !this.active;
@@ -21,7 +16,10 @@ export default {
     computed:{
         colorsArr(){
             let colors = this.colors;
-            let result;
+            let result=null;
+            if(typeof colors === "string"){
+                colors=colors.split(" ");
+            }
             if(colors.length === 1){
                 result=[`spinner-${colors[0]}-only`];
             }else {

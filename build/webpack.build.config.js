@@ -1,28 +1,30 @@
+var vue = require('vue-loader')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/entry.js',
   output: {
     path: './dist',
     filename: 'vue-material.min.js',
-    library: 'VueMaterial',
+    library: 'vue-material',
     libraryTarget: 'umd'
   },
   module: {
     loaders: [
-      { test: /\.vue$/, loader: 'vue' },
+     {
+        test: /\.vue$/,
+        loader: vue.withLoaders({
+          // apply babel transform to all javascript
+          // inside *.vue files.
+          js: 'babel?optional[]=runtime'
+        })
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel'
+      },
     ]
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
-  ]
+    devtool: 'source-map'
 }

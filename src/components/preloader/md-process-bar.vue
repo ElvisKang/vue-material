@@ -1,19 +1,24 @@
 <template>
  <div class="progress">
-      <div :class="type" :style="{width:percentage+'%'}"></div>
+      <div :class="[indeterminate?'indeterminate':'determinate']" :style="{width:widthValue}"></div>
   </div>
 </template>
 
 <script type="babel">
 export default {
     props:{
-        percentage:{
+        percent:{
             type:Number,
             default:0
-        }
+        },
+        indeterminate:Boolean
     },
     computed:{
-        type:()=>this.percentage>=0?"determinate":"indeterminate"
+        widthValue(){
+            if(!indeterminate){
+                return this.percent+"%";
+             }
+        }
     }
 }
 </script>

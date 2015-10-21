@@ -1,23 +1,17 @@
 <template>
     <div class="chip">
-        <md-img :img="img"></md-img>
+        <img :src="imgSrc" :alt="imgAlt">
+        <img
         {{content}}
-        <i  v-if="isFlag" class="material-icons">close</i>
+        <i  v-if="flat" class="material-icons">close</i>
     </div>
 </template>
 
 <script type="babel">
-import {md-img} from '../commons/index.js';
+import {hasImg} from '../mixins/common-mixin.js'
 export default {
-    data(){
-        return {
-            img:null,
-            content:"",
-            isFlag:false
-        }
-    },
-    components:{
-        md-img
+    props:{
+        flat:Boolean
     }
 }
 </script>

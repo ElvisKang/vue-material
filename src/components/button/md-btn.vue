@@ -1,24 +1,19 @@
 <template>
-<a :class="[isFlat?'btn-flat':'btn']">
-    <slot  v-if="!isFlat" name="icon">
-        <md-icon   :icon="icon"></md-icon>
+<a :class="[flat?'btn-flat':'btn']">
+    <slot  v-if="!flat" name="icon">
+        <md-icon   :icon-text="iconText" :icon-pos="iconPos"></md-icon>
     </slot>
     {{text}}
 </a>
 </template>
 
 <script lang="babel">
-import {md-icon} from '../commons/index.js';
+import {btnIcon} from './mixin.js';
 export default {
-    data(){
-        return {
-            text:"Button",
-            icon:null,
-            isFlat:false        
-        }
-    },
-    components:{
-        md-icon
+    mixins:[btnIcon],
+    props:{
+        flat:Boolean,
+        text:String
     }
 }
 </script>

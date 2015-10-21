@@ -6,14 +6,14 @@
 </template>
 
 <script type="babel">
-import md-badge from './md-badge.vue';
+import mdBadge from './md-badge.vue';
 export default {
         props : {
             link:Object,
             badge:Object
         },
         components : {
-            md-badge
+            mdBadge
         }
 }   
 </script>

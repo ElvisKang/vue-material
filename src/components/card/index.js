@@ -1,19 +1,19 @@
-import md-card-title from './md-card-title.vue';
-import md-card-img from './md-card-img.vue';
-import md-card-action from './md-card-action.vue';
-import md-card-content from './md-card-content.vue';
-import md-basic-card from './md-basic-card.vue';
-import md-panel-card from './md-panel-card.vue';
-import md-reveal-card from './md-reveal-card.vue';
-import md-image-card from './md-image-card.vue';
+import mdBasicCard from './md-basic-card.vue';
+import mdCardAction from './md-card-action.vue';
+import mdCardContent from './md-card-content.vue';
+import mdCardImg from './md-card-img.vue';
+import mdCardTitle from './md-card-title.vue';
+import mdImageCard from './md-image-card.vue';
+import mdPanelCard from './md-panel-card.vue';
+import mdRevealCard from './md-reveal-card.vue';
 
 export default {
-    md-card-img,
-    md-card-content,
-    md-card-action,
-    md-card-title,
-    md-reveal-card,
-    md-panel-card
-    md-image-card,
-    md-basic-card
+    mdBasicCard,
+    mdCardAction,
+    mdCardContent,
+    mdCardImg,
+    mdCardTitle,
+    mdImageCard,
+    mdPanelCard,
+    mdRevealCard
 }
