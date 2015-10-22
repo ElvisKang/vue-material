@@ -14,7 +14,7 @@ export  default {
         defaultValue:{
             type:String,
             default:""
-        }
+        },
         browserDefault:Boolean,
         options:Object,
         title:String

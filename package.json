@@ -2,13 +2,13 @@
   "name": "vue-material",
   "version": "0.0.1",
   "description": "(Still Building)Material-design components built with pure Vue.js",
-  "main": "index.js",
+  "main": "src/entry.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p --progress --config build/webpack.build.config.js"
+    "build": "webpack  --config build/webpack.build.dev.config.js & webpack   --config build/webpack.build.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
   },
   "keywords": [
     "vue",
-    "material"
+    "material",
+    "vue-material"
   ],
   "author": "Elvis Kang",
   "license": "MIT",

@@ -5,7 +5,7 @@
 </template>
 
 <script type="babel">
-import md-circular-item from './md-circular-item.vue';
+import mdCircularItem from './md-circular-item.vue';
 export default {
     props:['colors'],
     methods:{
@@ -29,7 +29,7 @@ export default {
         }
     },
     components:{
-        md-circular-item
+        'md-circular-item':mdCircularItem
     }
 }
 </script>

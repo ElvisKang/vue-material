@@ -7,21 +7,20 @@ let basicAttr = {
         name: String,
         placeholder: String,
         value: String,
-
     }
 };
 let status = {
     props: {
-        checked:Boolean
+        checked:Boolean,
         disabled: Boolean,
         required: Boolean,
     }
 }
 let formIcon = {
     props: {
-        iconText: String
+        iconText: String,
         iconPos:{
-            type=String,
+            type:String,
             default:"prefix"
         }
     },
@@ -31,6 +30,6 @@ let formIcon = {
 }
 export default {
     basicAttr,
-    formIcon
+    formIcon,
     status,
 }

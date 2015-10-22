@@ -1,0 +1,25 @@
+var config = require('./webpack.config.js');
+var webpack = require('webpack')
+
+module.exports = {
+    entry: './src/entry',
+    output: {
+        path: './dist',
+        filename: 'vue-material.min.js',
+        library: 'vue-material',
+        libraryTarget: 'umd'
+    },
+    module:config.module,
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
+    ]
+}

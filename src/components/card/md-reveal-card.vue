@@ -17,15 +17,15 @@
 </template>
 
 <script type="babel">
-import mixin from './mixin.js';
+import {basic} from '../mixins/card-mixin.js';
 export default {
-    mixins:[mixin],
+    mixins:[basic],
     data(){
         return {
             title:"",
             content:"",
             revealTitle:"",
-            revealContent:""
+            revealContent:"",
             img:null,
             links:null
         }

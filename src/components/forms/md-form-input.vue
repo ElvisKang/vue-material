@@ -11,7 +11,7 @@
 <script type="babel">
 import {basicAttr,status,formIcon} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basic,formIcon,status],
+    mixins:[basicAttr,formIcon,status],
     props:{
         type:{
             type:String,

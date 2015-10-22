@@ -17,7 +17,7 @@ export default {
             default:false
         },
         item:Object
-    }
+    },
     components:{
         'md-icon':mdIcon
     }

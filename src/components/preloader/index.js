@@ -1,9 +1,9 @@
-import mdCirecle from 'md-cirecle.vue';
-import mdCirecleItem from 'md-cirecle-item.vue';
-import mdProcessBar from 'md-process-bar.vue';
+import mdCircular from './md-circular.vue';
+import mdCircularItem from './md-circular-item.vue';
+import mdProcessBar from './md-process-bar.vue';
 
 export default {
-    mdCirecle,
-    mdCirecleItem,
+    mdCircular,
+    mdCircularItem,
     mdProcessBar
 }

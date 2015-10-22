@@ -6,7 +6,6 @@
 </template>
 
 <script type="babel">
-import mdCard from './md-card-'
 export default {
     props:{
         content:String

@@ -1,8 +1,4 @@
-import mdCardAction from './md-card-action.vue';
-import mdCardContent from './md-card-content.vue';
-import mdCardTitle from './md-card-title.vue';
-import mdCardImg from './md-card-img.vue';
-
+import {mdCardAction,mdCardContent,mdCardTitle,mdCardImg} from '../card/index.js';
 export default {
     basic: {
         components: {

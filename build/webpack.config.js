@@ -1,14 +1,6 @@
 var vue = require('vue-loader')
-var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/entry.js',
-  output: {
-    path: './dist',
-    filename: 'vue-material.min.js',
-    library: 'vue-material',
-    libraryTarget: 'umd'
-  },
   module: {
     loaders: [
      {
@@ -25,6 +17,5 @@ module.exports = {
         loader: 'babel'
       },
     ]
-  },
-    devtool: 'source-map'
+  }
 }
