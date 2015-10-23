@@ -1,21 +1,26 @@
 <template>
-<div class="fixed-action-btn" :style="pos">
+<div :class="['fixed-action-btn']" :style="pos">
+    <md-btn-f @mouseover="mouseEvent" @mouseout="mouseEvent" ></md-btn-f>
+    <ul  v-show="hover">
+        <slot></slot>
+    </ul>
 </div>
 </template>
 
 <script type="babel">
 export default {
-    props:{
-        btnPos:Object
+    data(){
+        return {
+            hover:false
+        }
     },
-    computed:{
-        pos(){
-            let result = {};
-            for(let i in this.btnPos) {
-                if(typeof i === "number"){
-                    result[i] = 
-                }
-            }
+    props:{
+        pos:Object,
+        mainText:String
+    },
+    methods:{
+        mouseEvent(){
+            this.hover = !this.hover;
         }
     }
 }

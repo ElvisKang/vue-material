@@ -3,10 +3,12 @@ let basicAttr = {
     replace: false,
     props: {
         id: String,
-        label: String,
         name: String,
         placeholder: String,
-        value: String,
+        value: {
+            type:String,
+            twoWay:true
+        },
     }
 };
 let status = {

@@ -1,10 +1,12 @@
 <template>
 <nav>
-      <div :class="[fixed?'navbar-fixed':'nav-wrapper']">
+      <div class="nav-wrapper">
         <md-nav-logo :href="logo.href" :text="logo.text" :pos="logo.pos">
             <slot name="logo-cus"></slot>
         </md-nav-logo>
-       <slot name="nav-links"> </slot>
+        <ul v-if="nolink" :class="[linksPos]">
+            <slot></slot> 
+        </ul>
       </div>
 </nav>
 </template>
@@ -13,7 +15,9 @@
 export default {
     props:{
         fixed:Boolean,
-        logo:Object
+        logo:Object,
+        nolink:Boolean,
+        linksPos:String
 /*        logoText:String,
         logoPos:{
             type:String,
@@ -26,9 +30,10 @@ export default {
     },
     created(){
             //check logo
+            //logo.pos can be empty
             let logo= this.logo;
-            logo.pos = logo.pos || "left";
             logo.href = logo.href || "#";
+
     }
 }
 </script>

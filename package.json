@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack  --config build/webpack.build.dev.config.js & webpack   --config build/webpack.build.prod.config.js"
+    "build": "webpack  --config build/webpack.build.dev.config.js & webpack   --config build/webpack.build.prod.config.js",
+    "doc": "webpack --watch --config build/webpack.dev.js"
   },
   "repository": {
     "type": "git",

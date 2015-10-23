@@ -1,15 +1,11 @@
 import {mdIcon} from '../commons/index.js';
 export default {
-    btnIcon:{
-        props:{
-            iconText:String,
-            iconPos:{
-                type:String,
-                default:"left"
-            }
+    btnIcon: {
+        props: {
+            iconText: String,
         },
-        components:{
-            "md-icon":mdIcon
+        components: {
+            "md-icon": mdIcon
         }
     }
 }

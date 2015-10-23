@@ -1,9 +1,9 @@
 <template>
-<a :class="[flat?'btn-flat':'btn']">
+<a :class="[flat?'btn-flat':'btn',disabled?'disabled':'']">
     <slot  name="icon">
         <md-icon   v-if="!flat"  :text="iconText" :pos="iconPos"></md-icon>
     </slot>
-    {{text}}
+    <slot></slot>
 </a>
 </template>
 
@@ -12,8 +12,12 @@ import {btnIcon} from '../mixins/button-mixin.js';
 export default {
     mixins:[btnIcon],
     props:{
-        flat:Boolean,
-        text:String
-    }
+            disabled:Boolean,
+            iconPos:{
+                type:String,
+                default:"left"
+            },
+            flat:Boolean
+        }
 }
 </script>
