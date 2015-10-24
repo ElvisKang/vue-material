@@ -17,13 +17,13 @@
         </p>
     </section>
         <section id="status">
-        <h2>status</h2>
+        <h2>Status</h2>
         <p>
             Still Under Building....
         </p>
     </section>
     </section>
-    <section id="status">
+    <section id="declaration">
     <h2>Declaration</h2>
     <p>
         This project doesn't  belong to  Materializecss. I'd like to thank Alan Chang for permitting me to use their Logo for this project. :)
@@ -49,7 +49,7 @@ export default {
 <style>
     #about>section p {
         font-size: 1.25rem;
-    },
+    }
     #logo {
         margin-top: 20px;
     }

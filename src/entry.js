@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import VueMaterial from './vue-material.min.js';
 import App from './app.vue';
 import Views from './views/index.js';
-VueMaterial.register(Vue);
+VueMaterial.registerAll(Vue);
 Vue.use(VueRouter);
 var router = new VueRouter();
 router.map({
@@ -18,6 +18,9 @@ router.map({
     },
     '/navbar':{
         component:Views.Navbar
+    },
+    '/forms':{
+        component:Views.Forms
     }
 });
 router.beforeEach(function () {

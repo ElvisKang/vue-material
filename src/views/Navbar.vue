@@ -4,9 +4,9 @@
     </md-nav>
 </header>    
 <div class="container">
-<article>
-    <section class="center">
-        <p>Coming Soon</p>
+<article id="navbar">
+    <section>
+        <p>Coming soon</p>
     </section>
 </article>
 </template>
@@ -21,7 +21,8 @@
                     href:"!#/navbar",
                     text:"Navbar",
                     pos:"center"
-                }
+                },
+                // codes
             }
         }
     }

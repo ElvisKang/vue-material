@@ -1,5 +1,5 @@
 <template>
-<md-sidenav fixed>
+<md-sidenav id="sidenav" fixed>
 <li class="logo">
     <a v-link="{path:'/about'}">
         <object data="static/images/logo.svg" type="image/svg+xml"></object>
@@ -18,10 +18,13 @@
                         <a v-link="{path:'/buttons'}">Buttons</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/navbar'}">Navbar</a>
+                        <a v-link="{path:'/footer'}">Footer</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/footer'}">Footer</a>
+                        <a v-link="{path:'/forms'}">Forms</a>
+                </li>
+                <li>
+                        <a v-link="{path:'/navbar'}">Navbar</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +50,6 @@ export default {
     methods:{
         collapse(name){
             this.collapseStatus[name]=!this.collapseStatus[name];
-            console.log(this);
         }
     }
 }
@@ -65,5 +67,8 @@ export default {
 }
 .bold >a {
     font-weight: bold;
+}
+#sidenav a.v-link-active {
+    color: #41B883;
 }
 </style>
