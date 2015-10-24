@@ -159,6 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        for (var item in com) {
 	            var regName = this._camel2kebab(item);
 	            Vue.component(regName, com[item]);
+	            console.log(regName);
 	        }
 	        this._registered.push(name);
 	    }
@@ -224,13 +225,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(26)
-	module.exports.template = __webpack_require__(39)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(39)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn.vue"
+	var id = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-btn.vue"], function () {
 	var newOptions = require("-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn.vue")
@@ -325,13 +326,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(30)
-	module.exports.template = __webpack_require__(31)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(31)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-badge.vue"
+	var id = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-badge.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-badge.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-badge.vue"], function () {
 	var newOptions = require("-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-badge.vue")
@@ -373,13 +374,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(33)
-	module.exports.template = __webpack_require__(34)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(34)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-icon.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-icon.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-icon.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-icon.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-icon.vue")
@@ -417,13 +418,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(36)
-	module.exports.template = __webpack_require__(38)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-link.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-link.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-link.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-link.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-link.vue")
@@ -491,13 +492,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(41)
-	module.exports.template = __webpack_require__(42)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(42)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn-f.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn-f.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn-f.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-btn-f.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-btn-f.vue")
@@ -543,13 +544,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(44)
 	module.exports = __webpack_require__(48)
-	module.exports.template = __webpack_require__(49)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(49)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-fab.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-fab.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-fab.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-fab.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-fab.vue")
@@ -897,7 +898,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    props: {
 	        pos: Object,
-	        mainText: String
+	        mainBtn: Object
 	    },
 	    methods: {
 	        mouseEvent: function mouseEvent() {
@@ -911,7 +912,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 49 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"{'fixed-action-btn':true,'active':hover}\" :style=\"pos\">\n    <md-btn-f class=\"large\" @mouseover=\"mouseEvent\" @mouseout=\"mouseEvent\" ></md-btn-f>\n        <slot v-show=\"hover\"></slot>\n</div>";
+	module.exports = "<div :class=\"{'fixed-action-btn':true,'active':hover}\" :style=\"pos\">\n    <md-btn-f :class=\"mainBtn.class\"  :icon-text=\"mainBtn.text\" @mouseover=\"mouseEvent\" @mouseout=\"mouseEvent\" ></md-btn-f>\n    <ul v-show=\"hover\">\n        <slot></slot>\n    </ul>\n</div>";
 
 /***/ },
 /* 50 */
@@ -939,13 +940,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(52)
-	module.exports.template = __webpack_require__(53)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(53)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-sidenav.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue")
@@ -1017,13 +1018,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(56)
-	module.exports.template = __webpack_require__(57)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(57)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue")
@@ -1046,7 +1047,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    props: {
 	        fixed: Boolean,
 	        logo: Object,
-	        nolink: Boolean,
+	        noLink: Boolean,
 	        linksPos: String
 	        /*        logoText:String,
 	                logoPos:{
@@ -1071,20 +1072,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 57 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav>\n      <div class=\"nav-wrapper\">\n        <md-nav-logo :href=\"logo.href\" :text=\"logo.text\" :pos=\"logo.pos\">\n            <slot name=\"logo-cus\"></slot>\n        </md-nav-logo>\n        <ul v-if=\"nolink\" :class=\"[linksPos]\">\n            <slot></slot> \n        </ul>\n      </div>\n</nav>";
+	module.exports = "<nav>\n      <div class=\"nav-wrapper\">\n        <md-nav-logo :href=\"logo.href\" :text=\"logo.text\" :pos=\"logo.pos\">\n            <slot name=\"logo\"></slot>\n        </md-nav-logo>\n        <ul v-if=\"noLink\" :class=\"[linksPos]\">\n            <slot></slot> \n        </ul>\n      </div>\n</nav>";
 
 /***/ },
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(59)
-	module.exports.template = __webpack_require__(60)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(60)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-li.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue")
@@ -1132,13 +1133,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(62)
-	module.exports.template = __webpack_require__(63)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(63)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-logo.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue")
@@ -1170,7 +1171,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 63 */
 /***/ function(module, exports) {
 
-	module.exports = "<a :href=\"href\" :class=\"['brand-logo',pos]\">\n    <slot name=\"logo-cus\">\n        {{text}}\n    </slot>\n</a>";
+	module.exports = "<a :href=\"href\" :class=\"['brand-logo',pos]\">\n    <slot name=\"logo\">\n        {{text}}\n    </slot>\n</a>";
 
 /***/ },
 /* 64 */
@@ -1213,13 +1214,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(66)
-	module.exports.template = __webpack_require__(67)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(67)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-footer.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer.vue")
@@ -1252,13 +1253,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(69)
-	module.exports.template = __webpack_require__(70)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(70)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-content.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-content.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-content.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-footer-content.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-content.vue")
@@ -1280,11 +1281,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports["default"] = {
 	    props: {
 	        options: Object
-	    },
-	    computed: {
-	        divCol: function divCol() {
-	            return "col " + this.options.col;
-	        }
 	    }
 	};
 	module.exports = exports["default"];
@@ -1293,20 +1289,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 70 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"divCol\">\n    <slot name=\"title\">\n        <h5>{{options.title}}</h5>\n    </slot>\n    <p >\n        <slot>{{options.text}}</slot>\n    </p>\n    <slot name=\"other\"></slot>\n</div>";
+	module.exports = "<div>\n    <slot name=\"title\">\n        <h5 :class=\"[options.titleClass]\">{{options.title}}</h5>\n    </slot>\n    <slot name=\"text\">\n        <p  :class=\"[options.textClass]\">\n                {{options.text}}\n        </p>\n    </slot>\n    <slot></slot>\n</div>";
 
 /***/ },
 /* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(72)
-	module.exports.template = __webpack_require__(73)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(73)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-copyright.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-copyright.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-copyright.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-footer-copyright.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-copyright.vue")
@@ -1336,20 +1332,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 73 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"footer-copyright\">\n            <div class=\"container\">\n                {{options.content}}\n                <a class=\"right\" :href=\"options.link.href\">{{options.link.text}}\n                </a>\n            </div>\n </div>";
+	module.exports = "<div class=\"footer-copyright\">\n            <div class=\"container\">\n                <slot>\n                    <span :class=\"[textClass]\">{{options.text}}</span>\n                    <a :class=\"[options.link.linkClass,'right']\" :href=\"options.link.href\">{{options.link.text}}\n                    </a>\n                </slot>\n            </div>\n </div>";
 
 /***/ },
 /* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(75)
-	module.exports.template = __webpack_require__(76)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(76)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-links.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-links.vue"
 	hotAPI.createRecord(id, module.exports)
 	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-links.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-footer-links.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-footer-links.vue")
@@ -1370,7 +1366,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports["default"] = {
 	     props: {
-	          linkList: Object
+	          options: Object
 	     }
 	};
 	module.exports = exports["default"];
@@ -1379,7 +1375,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 76 */
 /***/ function(module, exports) {
 
-	module.exports = "<slot name=\"title\"></slot>\n    <ul>\n        <li v-for=\"link in linkList\">\n            <a :href=\"link.href\">\n                {{link.text}}\n            </a>\n        </li>\n    </ul>";
+	module.exports = "<div>\n    <slot name=\"title\">\n      <h5 :class=\"[options.titleClass]\">{{options.title}}</h5>\n    </slot>\n    <slot name=\"links\">\n      <ul>\n          <li v-for=\"link in options.links\">\n              <a :href=\"link.href\"  :class=\"[options.linkClass]\">\n                  {{link.text}}\n              </a>\n          </li>\n      </ul>\n    </slot>\n</div>";
 
 /***/ },
 /* 77 */
@@ -1393,52 +1389,52 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mdFormCheckboxVue = __webpack_require__(78);
+	var _mdCheckboxVue = __webpack_require__(78);
 
-	var _mdFormCheckboxVue2 = _interopRequireDefault(_mdFormCheckboxVue);
+	var _mdCheckboxVue2 = _interopRequireDefault(_mdCheckboxVue);
 
-	var _mdFormFileVue = __webpack_require__(82);
+	var _mdFileVue = __webpack_require__(82);
 
-	var _mdFormFileVue2 = _interopRequireDefault(_mdFormFileVue);
+	var _mdFileVue2 = _interopRequireDefault(_mdFileVue);
 
-	var _mdFormInputVue = __webpack_require__(85);
+	var _mdInputVue = __webpack_require__(85);
 
-	var _mdFormInputVue2 = _interopRequireDefault(_mdFormInputVue);
+	var _mdInputVue2 = _interopRequireDefault(_mdInputVue);
 
-	var _mdFormRadioVue = __webpack_require__(88);
+	var _mdRadioVue = __webpack_require__(88);
 
-	var _mdFormRadioVue2 = _interopRequireDefault(_mdFormRadioVue);
+	var _mdRadioVue2 = _interopRequireDefault(_mdRadioVue);
 
-	var _mdFormRangeVue = __webpack_require__(91);
+	var _mdRangeVue = __webpack_require__(91);
 
-	var _mdFormRangeVue2 = _interopRequireDefault(_mdFormRangeVue);
+	var _mdRangeVue2 = _interopRequireDefault(_mdRangeVue);
 
-	var _mdFormSelectVue = __webpack_require__(94);
+	var _mdSelectVue = __webpack_require__(94);
 
-	var _mdFormSelectVue2 = _interopRequireDefault(_mdFormSelectVue);
+	var _mdSelectVue2 = _interopRequireDefault(_mdSelectVue);
 
-	var _mdFormSubmitVue = __webpack_require__(97);
+	var _mdSubmitVue = __webpack_require__(97);
 
-	var _mdFormSubmitVue2 = _interopRequireDefault(_mdFormSubmitVue);
+	var _mdSubmitVue2 = _interopRequireDefault(_mdSubmitVue);
 
-	var _mdFormSwitchVue = __webpack_require__(100);
+	var _mdSwitchVue = __webpack_require__(100);
 
-	var _mdFormSwitchVue2 = _interopRequireDefault(_mdFormSwitchVue);
+	var _mdSwitchVue2 = _interopRequireDefault(_mdSwitchVue);
 
-	var _mdFormTextareaVue = __webpack_require__(103);
+	var _mdTextareaVue = __webpack_require__(103);
 
-	var _mdFormTextareaVue2 = _interopRequireDefault(_mdFormTextareaVue);
+	var _mdTextareaVue2 = _interopRequireDefault(_mdTextareaVue);
 
 	exports['default'] = {
-	    mdFormCheckbox: _mdFormCheckboxVue2['default'],
-	    mdFormFile: _mdFormFileVue2['default'],
-	    mdFormInput: _mdFormInputVue2['default'],
-	    mdFormRadio: _mdFormRadioVue2['default'],
-	    mdFormRange: _mdFormRangeVue2['default'],
-	    mdFormSelect: _mdFormSelectVue2['default'],
-	    mdFormSubmit: _mdFormSubmitVue2['default'],
-	    mdFormSwitch: _mdFormSwitchVue2['default'],
-	    mdFormTextarea: _mdFormTextareaVue2['default']
+	    mdCheckbox: _mdCheckboxVue2['default'],
+	    mdFile: _mdFileVue2['default'],
+	    mdInput: _mdInputVue2['default'],
+	    mdRadio: _mdRadioVue2['default'],
+	    mdRange: _mdRangeVue2['default'],
+	    mdSelect: _mdSelectVue2['default'],
+	    mdSubmit: _mdSubmitVue2['default'],
+	    mdSwitch: _mdSwitchVue2['default'],
+	    mdTextarea: _mdTextareaVue2['default']
 	};
 	module.exports = exports['default'];
 
@@ -1447,17 +1443,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(79)
-	module.exports.template = __webpack_require__(81)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(81)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-checkbox.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-checkbox.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-checkbox.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-checkbox.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-checkbox.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-checkbox.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-checkbox.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-checkbox.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-checkbox.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-checkbox.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -1544,17 +1540,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(83)
-	module.exports.template = __webpack_require__(84)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(84)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-file.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-file.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-file.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-file.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-file.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-file.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-file.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-file.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-file.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-file.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -1594,46 +1590,88 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-input.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
-	module.exports.template = __webpack_require__(87)
+	module.exports = __webpack_require__(86)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(87)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-input.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-input.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-input.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-input.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-input.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-input.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-input.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-input.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-input.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-input.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
 	}
 
 /***/ },
-/* 86 */,
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _mixinsFormMixinJs = __webpack_require__(80);
+
+	exports["default"] = {
+	    mixins: [_mixinsFormMixinJs.basicAttr, _mixinsFormMixinJs.formIcon, _mixinsFormMixinJs.status],
+	    data: function data() {
+	        return {
+	            focus: false
+	        };
+	    },
+	    props: {
+	        type: {
+	            type: String,
+	            "default": "text"
+	        },
+	        validate: Boolean,
+	        value: {
+	            type: String
+	        }
+	    },
+	    computed: {
+	        labelActive: function labelActive() {}
+	    },
+	    ready: function ready() {
+	        console.log(this.value);
+	    },
+	    watch: {
+	        value: function value() {
+	            console.log(this.value);
+	        }
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
 /* 87 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"input-field\">\n        <slot name=\"icon\">\n            <md-icon :icon=\"icon\"></md-icon>\n        </slot>\n        <input :id=\"id\" :name=\"name\" :value=\"value\" :placeholder=\"placeholder\" :type=\"type\"  :class=\"{'validate':validate}\" :disabled=\"disabled\" :required=\"required\" @focus=\"focus=true\" @blur=\"focus=false\">\n        <label :for=\"id\" :class=\"{'active':focus}\"><slot></slot></label>\n        <span v-show=\"\">{{}}</span>\n</div>";
+	module.exports = "<div class=\"input-field\">\n        <slot name=\"icon\">\n            <md-icon :icon=\"icon\"></md-icon>\n        </slot>\n        <input :id=\"id\" :name=\"name\" :value=\"value?value:''\" :placeholder=\"placeholder\" :type=\"type\"  :class=\"{'validate':validate}\" :disabled=\"disabled\" :required=\"required\" @focus=\"focus=true\" @blur=\"focus=false\">\n        <label :for=\"id\" :class=\"{'active':focus}\"><slot></slot></label>\n</div>";
 
 /***/ },
 /* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(89)
-	module.exports.template = __webpack_require__(90)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(90)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-radio.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-radio.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-radio.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-radio.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-radio.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-radio.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-radio.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-radio.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-radio.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-radio.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -1669,25 +1707,67 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-range.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
-	module.exports.template = __webpack_require__(93)
+	module.exports = __webpack_require__(92)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(93)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-range.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-range.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-range.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-range.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-range.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-range.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-range.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-range.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-range.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-range.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
 	}
 
 /***/ },
-/* 92 */,
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _mixinsFormMixinJs = __webpack_require__(80);
+
+	exports['default'] = {
+	    mixins: [_mixinsFormMixinJs.basicAttr, _mixinsFormMixinJs.status],
+	    data: function data() {
+	        return {
+	            showThumb: false,
+	            thumb: {}
+	        };
+	    },
+	    props: {
+	        min: {
+	            type: Number,
+	            'default': 0
+	        },
+	        max: {
+	            type: Number,
+	            'default': 0
+	        },
+	        step: {
+	            type: Number,
+	            'default': 1
+	        },
+	        value: Number
+	    },
+	    methods: {
+	        mouseEvent: function mouseEvent() {
+	            this.showThumb = !this.showThumb;
+	        }
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
 /* 93 */
 /***/ function(module, exports) {
 
@@ -1698,17 +1778,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(95)
-	module.exports.template = __webpack_require__(96)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(96)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-select.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-select.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-select.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-select.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-select.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-select.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-select.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-select.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-select.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-select.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -1751,17 +1831,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(98)
-	module.exports.template = __webpack_require__(99)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(99)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-submit.vue"
+	var id = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-submit.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-submit.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-submit.vue"], function () {
-	var newOptions = require("-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-submit.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-submit.vue")
+	module.hot.accept(["-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-submit.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-submit.vue"], function () {
+	var newOptions = require("-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-submit.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-submit.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -1801,17 +1881,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(101)
-	module.exports.template = __webpack_require__(102)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(102)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-switch.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-switch.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-switch.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-switch.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-switch.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-switch.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-switch.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-switch.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-switch.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-switch.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -1855,17 +1935,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(104)
-	module.exports.template = __webpack_require__(105)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(105)
 	if (false) {
 	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/lib/hot-reload-api.js")
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = module.exports.hotID = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-textarea.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-textarea.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-textarea.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-textarea.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-form-textarea.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-form-textarea.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-textarea.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-textarea.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-textarea.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-textarea.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()

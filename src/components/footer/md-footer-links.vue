@@ -1,5 +1,5 @@
 <template>
-<div :class="divCol">
+<div>
     <slot name="title">
       <h5 :class="[options.titleClass]">{{options.title}}</h5>
     </slot>
@@ -19,11 +19,6 @@
 export default {
      props:{
           options:Object
-     },
-      computed:{
-          divCol(){
-              return  `col ${this.options.col}`;
-          }
-      }
+     }
 }
 </script>
