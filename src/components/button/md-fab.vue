@@ -1,7 +1,7 @@
 <template>
-<div :class="['fixed-action-btn']" :style="pos">
-    <md-btn-f @mouseover="mouseEvent" @mouseout="mouseEvent" ></md-btn-f>
-    <ul  v-show="hover">
+<div :class="{'fixed-action-btn':true,'active':hover}" :style="pos">
+    <md-btn-f :class="mainBtn.class"  :icon-text="mainBtn.text" @mouseover="mouseEvent" @mouseout="mouseEvent" ></md-btn-f>
+    <ul v-show="hover">
         <slot></slot>
     </ul>
 </div>
@@ -16,7 +16,7 @@ export default {
     },
     props:{
         pos:Object,
-        mainText:String
+        mainBtn:Object
     },
     methods:{
         mouseEvent(){
@@ -25,3 +25,9 @@ export default {
     }
 }
 </script>
+
+<style>
+.fixed-action-btn.active>ul a {
+    opacity: 1;
+}
+</style>

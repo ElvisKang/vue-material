@@ -2,9 +2,9 @@
 <nav>
       <div class="nav-wrapper">
         <md-nav-logo :href="logo.href" :text="logo.text" :pos="logo.pos">
-            <slot name="logo-cus"></slot>
+            <slot name="logo"></slot>
         </md-nav-logo>
-        <ul v-if="nolink" :class="[linksPos]">
+        <ul v-if="noLink" :class="[linksPos]">
             <slot></slot> 
         </ul>
       </div>
@@ -16,7 +16,7 @@ export default {
     props:{
         fixed:Boolean,
         logo:Object,
-        nolink:Boolean,
+        noLink:Boolean,
         linksPos:String
 /*        logoText:String,
         logoPos:{

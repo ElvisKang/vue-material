@@ -3,9 +3,8 @@
         <slot name="icon">
             <md-icon :icon="icon"></md-icon>
         </slot>
-        <input :id="id" :name="name" :value="value" :placeholder="placeholder" :type="type"  :class="{'validate':validate}" :disabled="disabled" :required="required" @focus="focus=true" @blur="focus=false">
+        <input :id="id" :name="name" :value="value?value:''" :placeholder="placeholder" :type="type"  :class="{'validate':validate}" :disabled="disabled" :required="required" @focus="focus=true" @blur="focus=false">
         <label :for="id" :class="{'active':focus}"><slot></slot></label>
-        <span v-show="">{{}}</span>
 </div>
 </template>
 
@@ -17,13 +16,29 @@ export default {
         return {
             focus:false
         }
-    }
+    },
     props:{
         type:{
             type:String,
             default:"text"
         },
-        validate:Boolean
+        validate:Boolean,
+        value:{
+                type:String
+        }
+    },
+    computed:{
+        labelActive(){
+
+        }
+    },
+    ready(){
+        console.log(this.value);
+    },
+    watch:{
+        value(){
+            console.log(this.value);
+        }
     }
 }
 </script>

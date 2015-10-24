@@ -1,6 +1,6 @@
 <template>
 <a :href="href" :class="['brand-logo',pos]">
-    <slot name="logo-cus">
+    <slot name="logo">
         {{text}}
     </slot>
 </a>

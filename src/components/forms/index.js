@@ -1,21 +1,21 @@
-import mdFormCheckbox from './md-form-checkbox.vue';
-import mdFormFile from './md-form-file.vue';
-import mdFormInput from './md-form-input.vue';
-import mdFormRadio from './md-form-radio.vue';
-import mdFormRange from './md-form-range.vue';
-import mdFormSelect from './md-form-select.vue';
-import mdFormSubmit from './md-form-submit.vue';
-import mdFormSwitch from './md-form-switch.vue';
-import mdFormTextarea from './md-form-textarea.vue';
+import mdCheckbox from './md-checkbox.vue';
+import mdFile from './md-file.vue';
+import mdInput from './md-input.vue';
+import mdRadio from './md-radio.vue';
+import mdRange from './md-range.vue';
+import mdSelect from './md-select.vue';
+import mdSubmit from './md-submit.vue';
+import mdSwitch from './md-switch.vue';
+import mdTextarea from './md-textarea.vue';
 
 export default {
-    mdFormCheckbox,
-    mdFormFile,
-    mdFormInput,
-    mdFormRadio,
-    mdFormRange,
-    mdFormSelect,
-    mdFormSubmit,
-    mdFormSwitch,
-    mdFormTextarea
+    mdCheckbox,
+    mdFile,
+    mdInput,
+    mdRadio,
+    mdRange,
+    mdSelect,
+    mdSubmit,
+    mdSwitch,
+    mdTextarea
 }

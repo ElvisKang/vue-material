@@ -1,5 +1,5 @@
 <template>
-    <ul :class="['side-nav',fixed?'fixed':'']" :style="{width:width+'px'}">
+    <ul  :class="['side-nav',fixed?'fixed':'']" :style="{width:width+'px'}">
         <slot></slot>
     </ul>
 </template>
