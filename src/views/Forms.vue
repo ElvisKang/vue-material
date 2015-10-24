@@ -26,7 +26,7 @@
         data(){
             return {
                 logo:{
-                    href:"!#/forms",
+                    href:"#!/forms",
                     text:"Forms",
                     pos:"center"
                 }

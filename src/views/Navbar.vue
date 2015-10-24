@@ -18,7 +18,7 @@
         data(){
             return {
                 logo:{
-                    href:"!#/navbar",
+                    href:"#!/navbar",
                     text:"Navbar",
                     pos:"center"
                 },

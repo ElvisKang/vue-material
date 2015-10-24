@@ -38,7 +38,7 @@ export default {
     data(){
         return {            
         logo:{
-            href:"!#/about",
+            href:"#!/about",
             text:"About",
             pos:"center"
              }

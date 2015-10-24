@@ -71,7 +71,7 @@ export default {
     data(){
         return {            
         logo:{
-            href:"!#/buttons",
+            href:"#!/buttons",
             text:"Buttons",
             pos:"center"
              },

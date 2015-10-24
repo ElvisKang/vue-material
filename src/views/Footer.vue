@@ -11,7 +11,6 @@
             <md-footer>
                 <md-footer-content slot="main" :options="demo1.content"></md-footer-content>
                 <md-footer-links slot="main" :options="demo1.links"></md-footer-links>
-                </md-footer-content>
                 <md-footer-copyright slot="copyright" :options="demo1.copr"></md-footer-copyright>
             </md-footer>
         </doc-item-demo>
@@ -39,7 +38,7 @@
                 <md-footer-links slot="main"  :options="{col:'l4 s12'}">
                     <h5 slot="title" class="white-text">Title3</h5>
                     <ul slot="links">
-                        <li><a href="!#footer"  class="white-text">Footer</a></li>                
+                        <li><a href="#!/footer"  class="white-text">Footer</a></li>                
                     </ul>
                 </md-footer-links>
                 <md-footer-copyright slot="copyright">
@@ -63,7 +62,7 @@
         data(){
             return {
                 logo:{
-                    href:"!#/footer",
+                    href:"#!/footer",
                     text:"Footer",
                     pos:"center"
                 },
@@ -79,7 +78,7 @@
                     links:{
                         col:'s12 l6',
                         title:'Links',
-                        links:[{href:"!#footer",text:"Footer"}],
+                        links:[{href:"#!/footer",text:"Footer"}],
                         titleClass:"white-text",
                         linkClass:"white-text"
                     },
