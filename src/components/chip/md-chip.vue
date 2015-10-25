@@ -1,7 +1,7 @@
 <template>
     <div class="chip">
-        <img :src="imgSrc" :alt="imgAlt">
-        {{text}}
+        <img v-if="imgSrc" :src="imgSrc" :alt="imgAlt">
+        <slot></slot>
         <i  v-if="tag" class="material-icons">close</i>
     </div>
 </template>
@@ -10,11 +10,7 @@
 import {hasImg} from '../mixins/common-mixin.js'
 export default {
     props:{
-        tag:{
-            type:Boolean,
-            default:true
-        },
-        text:String
+        tag:Boolean
     }
 }
 </script>

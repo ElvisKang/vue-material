@@ -1,6 +1,6 @@
 <template>
-<span class="card-title">
-    {{title}}
+<span :class="['card-title',reveal?'activator':'']">
+    <slot></slot>
     <slot name="icon"></slot>
 </span>
 </template>
@@ -8,7 +8,7 @@
 <script type="babel">
 export default {
     props:{
-        title:String
+        reveal:Boolean
     }
 }
 </script>

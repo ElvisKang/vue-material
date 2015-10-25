@@ -1,6 +1,6 @@
 <template>
-<div :class="{'fixed-action-btn':true,'active':hover}" :style="pos">
-    <md-btn-f :class="mainBtn.class"  :icon-text="mainBtn.text" @mouseover="mouseEvent" @mouseout="mouseEvent" ></md-btn-f>
+<div :class="{'fixed-action-btn':true,'active':hover}" @mouseover="mouseEvent" @mouseout="mouseEvent">
+    <slot name="main"></slot>
     <ul v-show="hover">
         <slot></slot>
     </ul>
@@ -13,10 +13,6 @@ export default {
         return {
             hover:false
         }
-    },
-    props:{
-        pos:Object,
-        mainBtn:Object
     },
     methods:{
         mouseEvent(){

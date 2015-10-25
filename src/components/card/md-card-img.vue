@@ -1,6 +1,6 @@
 <template>
 <div class="card-image">
-    <img :src="imgSrc" :alt="imgAlt" :class="{'activator':reveal}">
+    <img :src="imgSrc" :class="{'activator':reveal}">
     <slot name="title"></slot>      
 </div>
 </template>
@@ -9,7 +9,8 @@
 import {hasImg} from '../mixins/common-mixin.js';
 export default {
     props:{
-        reveal:Boolean
+        reveal:Boolean,
+        imgSrc:String
     }
 }
 </script>

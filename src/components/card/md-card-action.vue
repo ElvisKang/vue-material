@@ -1,6 +1,8 @@
 <template>
 <div class="card-action">
-    <a v-for="link in links" :href="link.href">{{link.text}}</a>
+    <slot name="links">
+        <a v-for="link in links"  :href="link.href">{{link.text}}</a>
+    </slot>
 </div>
 </template>
 

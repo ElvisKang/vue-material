@@ -1,17 +1,17 @@
 <template>
 <div class="card-panel">
-    <span>
-        {{content}}
+    <span :class="options.class">
+        <slot>
+                {{options.text}}
+        </slot>
     </span>
 </div>
 </template>
 
 <script type="babel">
 export default {
-    data(){
-        return {
-            content:""
-        }
+    props:{
+        options:Object
     }
 }
 </script>

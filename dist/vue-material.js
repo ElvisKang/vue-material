@@ -62,21 +62,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _componentsButtonIndexJs = __webpack_require__(24);
+	var _componentsButtonIndexJs = __webpack_require__(33);
 
 	var _componentsButtonIndexJs2 = _interopRequireDefault(_componentsButtonIndexJs);
 
-	var _componentsCommonsIndexJs = __webpack_require__(28);
+	var _componentsChipIndexJs = __webpack_require__(59);
+
+	var _componentsChipIndexJs2 = _interopRequireDefault(_componentsChipIndexJs);
+
+	var _componentsCommonsIndexJs = __webpack_require__(37);
 
 	var _componentsCommonsIndexJs2 = _interopRequireDefault(_componentsCommonsIndexJs);
-
-	var _componentsSidenavIndexJs = __webpack_require__(50);
-
-	var _componentsSidenavIndexJs2 = _interopRequireDefault(_componentsSidenavIndexJs);
-
-	var _componentsNavbarIndexJs = __webpack_require__(54);
-
-	var _componentsNavbarIndexJs2 = _interopRequireDefault(_componentsNavbarIndexJs);
 
 	var _componentsFooterIndexJs = __webpack_require__(64);
 
@@ -86,8 +82,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _componentsFormsIndexJs2 = _interopRequireDefault(_componentsFormsIndexJs);
 
-	/*import card from './components/card/index.js';
-	import chip from './components/chip/index.js';
+	var _componentsNavbarIndexJs = __webpack_require__(106);
+
+	var _componentsNavbarIndexJs2 = _interopRequireDefault(_componentsNavbarIndexJs);
+
+	var _componentsSidenavIndexJs = __webpack_require__(116);
+
+	var _componentsSidenavIndexJs2 = _interopRequireDefault(_componentsSidenavIndexJs);
+
+	var _componentsCardIndexJs = __webpack_require__(120);
+
+	var _componentsCardIndexJs2 = _interopRequireDefault(_componentsCardIndexJs);
+
+	/*
 	import collection from './components/collection/index.js';
 	import pagination from './components/pagination/index.js';
 	import preloader from './components/preloader/index.js';*/
@@ -95,20 +102,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = {
 	    components: {
 	        button: _componentsButtonIndexJs2['default'],
+	        card: _componentsCardIndexJs2['default'],
+	        chip: _componentsChipIndexJs2['default'],
 	        commons: _componentsCommonsIndexJs2['default'],
 	        footer: _componentsFooterIndexJs2['default'],
 	        forms: _componentsFormsIndexJs2['default'],
 	        navbar: _componentsNavbarIndexJs2['default'],
 	        sidenav: _componentsSidenavIndexJs2['default']
 	    },
-	    /*    card,
-	        chip,
+	    /*    
 	        collection,
 	        pagination,
 	        preloader,*/
-	    //this array should be replaced by something
-	    // componentsName: ['button', 'card', 'chip', 'collection', 'footer', 'forms', 'navbar', 'pagination', 'preloader'],
-	    // componentsName: ['button', 'sidenav', 'navbar', 'footer'],
 	    _registered: [],
 	    registerAll: function registerAll(Vue) {
 	        for (var comName in this.components) {
@@ -116,11 +121,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    },
 	    register: function register(Vue, names) {
-	        if (!Array.isArray(names)) {
-	            throw "Vue-material:Function register's the second param 'names' must be Array";
-	        }
-	        // In case that users forget to register commons
-	        this._regComponent(Vue, 'commons');
 	        var _iteratorNormalCompletion = true;
 	        var _didIteratorError = false;
 	        var _iteratorError = undefined;
@@ -151,8 +151,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    //mdXxYy=>md-xx-yy
 	    _camel2kebab: function _camel2kebab(str) {
-	        var reg = /([a-zA-Z])(?=[A-Z])/g;
-	        return str.replace(reg, '$1-').toLowerCase();
+	        var reg = /(?=[A-Z])/g;
+	        return str.replace(reg, '-').toLowerCase();
 	    },
 	    _regComponent: function _regComponent(Vue, name) {
 	        var com = this.components[name];
@@ -190,7 +190,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 21 */,
 /* 22 */,
 /* 23 */,
-/* 24 */
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -201,15 +210,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mdBtnVue = __webpack_require__(25);
+	var _mdBtnVue = __webpack_require__(34);
 
 	var _mdBtnVue2 = _interopRequireDefault(_mdBtnVue);
 
-	var _mdBtnFVue = __webpack_require__(40);
+	var _mdBtnFVue = __webpack_require__(49);
 
 	var _mdBtnFVue2 = _interopRequireDefault(_mdBtnFVue);
 
-	var _mdFabVue = __webpack_require__(43);
+	var _mdFabVue = __webpack_require__(52);
 
 	var _mdFabVue2 = _interopRequireDefault(_mdFabVue);
 
@@ -221,11 +230,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 25 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(26)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(39)
+	module.exports = __webpack_require__(35)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(48)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
@@ -242,7 +251,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 26 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -251,7 +260,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
-	var _mixinsButtonMixinJs = __webpack_require__(27);
+	var _mixinsButtonMixinJs = __webpack_require__(36);
 
 	exports["default"] = {
 	    mixins: [_mixinsButtonMixinJs.btnIcon],
@@ -267,7 +276,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 27 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -276,12 +285,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
-	var _commonsIndexJs = __webpack_require__(28);
+	var _commonsIndexJs = __webpack_require__(37);
 
 	exports["default"] = {
 	    btnIcon: {
 	        props: {
-	            iconText: String
+	            iconText: String,
+	            reveal: Boolean
 	        },
 	        components: {
 	            "md-icon": _commonsIndexJs.mdIcon
@@ -291,7 +301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 28 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -302,15 +312,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mdBadgeVue = __webpack_require__(29);
+	var _mdBadgeVue = __webpack_require__(38);
 
 	var _mdBadgeVue2 = _interopRequireDefault(_mdBadgeVue);
 
-	var _mdIconVue = __webpack_require__(32);
+	var _mdIconVue = __webpack_require__(41);
 
 	var _mdIconVue2 = _interopRequireDefault(_mdIconVue);
 
-	var _mdLinkVue = __webpack_require__(35);
+	var _mdLinkVue = __webpack_require__(44);
 
 	var _mdLinkVue2 = _interopRequireDefault(_mdLinkVue);
 
@@ -322,11 +332,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 29 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(30)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(31)
+	module.exports = __webpack_require__(39)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(40)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
@@ -343,7 +353,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 30 */
+/* 39 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -364,17 +374,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 31 */
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-show=\"count>0\" :class=\"['badge',badge.new?'new':'']\"  >{{count}}</span>";
 
 /***/ },
-/* 32 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(33)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(34)
+	module.exports = __webpack_require__(42)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(43)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
@@ -391,7 +401,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 33 */
+/* 42 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -408,17 +418,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 34 */
+/* 43 */
 /***/ function(module, exports) {
 
 	module.exports = "<i v-if=\"text\" :class=\"['material-icons',pos]\">{{text}}</i>";
 
 /***/ },
-/* 35 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(36)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
+	module.exports = __webpack_require__(45)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(47)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
@@ -435,18 +445,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 36 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(37)['default'];
+	var _interopRequireDefault = __webpack_require__(46)['default'];
 
 	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 
-	var _mdBadgeVue = __webpack_require__(29);
+	var _mdBadgeVue = __webpack_require__(38);
 
 	var _mdBadgeVue2 = _interopRequireDefault(_mdBadgeVue);
 
@@ -462,7 +472,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 37 */
+/* 46 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -476,23 +486,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.__esModule = true;
 
 /***/ },
-/* 38 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "<a href=\"{{link.href}}\">\n    {{link.text}}\n    <md-badge :badge=\"badge\"></md-badge>\n</a>";
 
 /***/ },
-/* 39 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "<a :class=\"[flat?'btn-flat':'btn',disabled?'disabled':'']\">\n    <slot  name=\"icon\">\n        <md-icon   v-if=\"!flat\"  :text=\"iconText\" :pos=\"iconPos\"></md-icon>\n    </slot>\n    <slot></slot>\n</a>";
 
 /***/ },
-/* 40 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(41)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(42)
+	module.exports = __webpack_require__(50)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(51)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
@@ -509,7 +519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 41 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -518,7 +528,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
-	var _mixinsButtonMixinJs = __webpack_require__(27);
+	var _mixinsButtonMixinJs = __webpack_require__(36);
 
 	exports['default'] = {
 	    mixins: [_mixinsButtonMixinJs.btnIcon],
@@ -533,18 +543,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 42 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = "<a :class=\"['btn-floating',disabled?'disabled':'']\" >\n        <md-icon   :text=\"iconText\"</md-icon>\n    </a>";
 
 /***/ },
-/* 43 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(44)
-	module.exports = __webpack_require__(48)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(49)
+	__webpack_require__(53)
+	module.exports = __webpack_require__(57)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(58)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
@@ -561,16 +571,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 44 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(45);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(47)(content, {});
+	var update = __webpack_require__(56)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -587,10 +597,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 45 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(46)();
+	exports = module.exports = __webpack_require__(55)();
 	// imports
 
 
@@ -601,7 +611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 46 */
+/* 55 */
 /***/ function(module, exports) {
 
 	/*
@@ -657,7 +667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 47 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -882,7 +892,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 48 */
+/* 57 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -896,10 +906,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            hover: false
 	        };
 	    },
-	    props: {
-	        pos: Object,
-	        mainBtn: Object
-	    },
 	    methods: {
 	        mouseEvent: function mouseEvent() {
 	            this.hover = !this.hover;
@@ -909,81 +915,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ },
-/* 49 */
+/* 58 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"{'fixed-action-btn':true,'active':hover}\" :style=\"pos\">\n    <md-btn-f :class=\"mainBtn.class\"  :icon-text=\"mainBtn.text\" @mouseover=\"mouseEvent\" @mouseout=\"mouseEvent\" ></md-btn-f>\n    <ul v-show=\"hover\">\n        <slot></slot>\n    </ul>\n</div>";
+	module.exports = "<div :class=\"{'fixed-action-btn':true,'active':hover}\" @mouseover=\"mouseEvent\" @mouseout=\"mouseEvent\">\n    <slot name=\"main\"></slot>\n    <ul v-show=\"hover\">\n        <slot></slot>\n    </ul>\n</div>";
 
 /***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	var _mdSidenavVue = __webpack_require__(51);
-
-	var _mdSidenavVue2 = _interopRequireDefault(_mdSidenavVue);
-
-	exports["default"] = {
-	    mdSidenav: _mdSidenavVue2["default"]
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(52)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(53)
-	if (false) {
-	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-sidenav.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-sidenav.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
-
-/***/ },
-/* 52 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = {
-	    props: {
-	        fixed: Boolean,
-	        width: {
-	            type: Number,
-	            "default": 240
-	        }
-	    }
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 53 */
-/***/ function(module, exports) {
-
-	module.exports = "<ul  :class=\"['side-nav',fixed?'fixed':'']\" :style=\"{width:width+'px'}\">\n        <slot></slot>\n    </ul>";
-
-/***/ },
-/* 54 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -994,160 +932,54 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mdNavVue = __webpack_require__(55);
+	var _mdChipVue = __webpack_require__(60);
 
-	var _mdNavVue2 = _interopRequireDefault(_mdNavVue);
-
-	var _mdNavLiVue = __webpack_require__(58);
-
-	var _mdNavLiVue2 = _interopRequireDefault(_mdNavLiVue);
-
-	var _mdNavLogoVue = __webpack_require__(61);
-
-	var _mdNavLogoVue2 = _interopRequireDefault(_mdNavLogoVue);
+	var _mdChipVue2 = _interopRequireDefault(_mdChipVue);
 
 	exports['default'] = {
-	    mdNav: _mdNavVue2['default'],
-	    mdNavLi: _mdNavLiVue2['default'],
-	    mdNavLogo: _mdNavLogoVue2['default']
+	    mdChip: _mdChipVue2['default']
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 55 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(56)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(57)
-	if (false) {
-	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
-
-/***/ },
-/* 56 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports["default"] = {
-	    props: {
-	        fixed: Boolean,
-	        logo: Object,
-	        noLink: Boolean,
-	        linksPos: String
-	        /*        logoText:String,
-	                logoPos:{
-	                    type:String,
-	                    default:"right",
-	                },
-	                logoHref:{
-	                    type:String,
-	                    default:"#"
-	                }*/
-	    },
-	    created: function created() {
-	        //check logo
-	        //logo.pos can be empty
-	        var logo = this.logo;
-	        logo.href = logo.href || "#";
-	    }
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 57 */
-/***/ function(module, exports) {
-
-	module.exports = "<nav>\n      <div class=\"nav-wrapper\">\n        <md-nav-logo :href=\"logo.href\" :text=\"logo.text\" :pos=\"logo.pos\">\n            <slot name=\"logo\"></slot>\n        </md-nav-logo>\n        <ul v-if=\"noLink\" :class=\"[linksPos]\">\n            <slot></slot> \n        </ul>\n      </div>\n</nav>";
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(59)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(60)
-	if (false) {
-	(function () {
-	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-li.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-li.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _commonsIndexJs = __webpack_require__(28);
-
-	exports["default"] = {
-	    props: {
-	        //can't work now
-	        dropdown: {
-	            type: Boolean,
-	            "default": false
-	        },
-	        item: Object
-	    },
-	    components: {
-	        'md-icon': _commonsIndexJs.mdIcon
-	    }
-	};
-	module.exports = exports["default"];
-
-/***/ },
 /* 60 */
-/***/ function(module, exports) {
-
-	module.exports = "<li>\n    <a :href=\"item.href\">\n        <md-icon v-if=\"item.icon\" :text=\"item.icon.text\" :pos=\"item.icon.pos\"></md-icon>\n        {{item.text}}\n    </a>\n</li>";
-
-/***/ },
-/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(62)
+	module.exports = __webpack_require__(61)
 	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(63)
 	if (false) {
 	(function () {
 	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue"
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-chip.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-logo.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue")
-	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-logo.vue")
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-chip.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-chip.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-chip.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-chip.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
 	}
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _mixinsCommonMixinJs = __webpack_require__(62);
+
+	exports['default'] = {
+	    props: {
+	        tag: Boolean
+	    }
+	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 62 */
@@ -1159,10 +991,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	exports["default"] = {
-	    props: {
-	        href: String,
-	        text: String,
-	        pos: String
+	    hasImg: {
+	        props: {
+	            imgSrc: String,
+	            imgAlt: String
+	        }
 	    }
 	};
 	module.exports = exports["default"];
@@ -1171,7 +1004,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 63 */
 /***/ function(module, exports) {
 
-	module.exports = "<a :href=\"href\" :class=\"['brand-logo',pos]\">\n    <slot name=\"logo\">\n        {{text}}\n    </slot>\n</a>";
+	module.exports = "<div class=\"chip\">\n        <img v-if=\"imgSrc\" :src=\"imgSrc\" :alt=\"imgAlt\">\n        <slot></slot>\n        <i  v-if=\"tag\" class=\"material-icons\">close</i>\n    </div>";
 
 /***/ },
 /* 64 */
@@ -1489,7 +1322,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
-	var _commonsIndexJs = __webpack_require__(28);
+	var _commonsIndexJs = __webpack_require__(37);
 
 	var basicAttr = {
 	    replace: false,
@@ -1973,6 +1806,722 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"input-field \">\n    <slot name=\"icon\">\n        <md-icon :icon=\"icon\"></md-icon>\n    </slot>\n    <textarea :id=\"id\" :name=\"name\" value=\"value\" class=\"materialize-textarea\" :disabled=\"disabled\"></textarea>\n    <label :for=\"id\">{{label}}</label>\n</div>";
+
+/***/ },
+/* 106 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _mdNavVue = __webpack_require__(107);
+
+	var _mdNavVue2 = _interopRequireDefault(_mdNavVue);
+
+	var _mdNavLiVue = __webpack_require__(110);
+
+	var _mdNavLiVue2 = _interopRequireDefault(_mdNavLiVue);
+
+	var _mdNavLogoVue = __webpack_require__(113);
+
+	var _mdNavLogoVue2 = _interopRequireDefault(_mdNavLogoVue);
+
+	exports['default'] = {
+	    mdNav: _mdNavVue2['default'],
+	    mdNavLi: _mdNavLiVue2['default'],
+	    mdNavLogo: _mdNavLogoVue2['default']
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 107 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(108)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(109)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 108 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    props: {
+	        fixed: Boolean,
+	        logo: Object,
+	        noLink: Boolean,
+	        linksPos: String
+	        /*        logoText:String,
+	                logoPos:{
+	                    type:String,
+	                    default:"right",
+	                },
+	                logoHref:{
+	                    type:String,
+	                    default:"#"
+	                }*/
+	    },
+	    created: function created() {
+	        //check logo
+	        //logo.pos can be empty
+	        var logo = this.logo;
+	        logo.href = logo.href || "#";
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 109 */
+/***/ function(module, exports) {
+
+	module.exports = "<nav>\n      <div class=\"nav-wrapper\">\n        <md-nav-logo :href=\"logo.href\" :text=\"logo.text\" :pos=\"logo.pos\">\n            <slot name=\"logo\"></slot>\n        </md-nav-logo>\n        <ul v-if=\"noLink\" :class=\"[linksPos]\">\n            <slot></slot> \n        </ul>\n      </div>\n</nav>";
+
+/***/ },
+/* 110 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(111)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(112)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-li.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-li.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-li.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 111 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _commonsIndexJs = __webpack_require__(37);
+
+	exports["default"] = {
+	    props: {
+	        //can't work now
+	        dropdown: {
+	            type: Boolean,
+	            "default": false
+	        },
+	        item: Object
+	    },
+	    components: {
+	        'md-icon': _commonsIndexJs.mdIcon
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 112 */
+/***/ function(module, exports) {
+
+	module.exports = "<li>\n    <a :href=\"item.href\">\n        <md-icon v-if=\"item.icon\" :text=\"item.icon.text\" :pos=\"item.icon.pos\"></md-icon>\n        {{item.text}}\n    </a>\n</li>";
+
+/***/ },
+/* 113 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(114)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(115)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-logo.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-nav-logo.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-nav-logo.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 114 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    props: {
+	        href: String,
+	        text: String,
+	        pos: String
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 115 */
+/***/ function(module, exports) {
+
+	module.exports = "<a :href=\"href\" :class=\"['brand-logo',pos]\">\n    <slot name=\"logo\">\n        {{text}}\n    </slot>\n</a>";
+
+/***/ },
+/* 116 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	var _mdSidenavVue = __webpack_require__(117);
+
+	var _mdSidenavVue2 = _interopRequireDefault(_mdSidenavVue);
+
+	exports["default"] = {
+	    mdSidenav: _mdSidenavVue2["default"]
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 117 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(118)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(119)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-sidenav.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-sidenav.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-sidenav.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 118 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    props: {
+	        fixed: Boolean,
+	        width: {
+	            type: Number,
+	            "default": 240
+	        }
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 119 */
+/***/ function(module, exports) {
+
+	module.exports = "<ul  :class=\"['side-nav',fixed?'fixed':'']\" :style=\"{width:width+'px'}\">\n        <slot></slot>\n    </ul>";
+
+/***/ },
+/* 120 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _mdBasicCardVue = __webpack_require__(121);
+
+	var _mdBasicCardVue2 = _interopRequireDefault(_mdBasicCardVue);
+
+	var _mdCardActionVue = __webpack_require__(124);
+
+	var _mdCardActionVue2 = _interopRequireDefault(_mdCardActionVue);
+
+	var _mdCardContentVue = __webpack_require__(127);
+
+	var _mdCardContentVue2 = _interopRequireDefault(_mdCardContentVue);
+
+	var _mdCardImgVue = __webpack_require__(130);
+
+	var _mdCardImgVue2 = _interopRequireDefault(_mdCardImgVue);
+
+	var _mdCardRevealVue = __webpack_require__(137);
+
+	var _mdCardRevealVue2 = _interopRequireDefault(_mdCardRevealVue);
+
+	var _mdCardTitleVue = __webpack_require__(133);
+
+	var _mdCardTitleVue2 = _interopRequireDefault(_mdCardTitleVue);
+
+	var _mdImageCardVue = __webpack_require__(140);
+
+	var _mdImageCardVue2 = _interopRequireDefault(_mdImageCardVue);
+
+	var _mdPanelCardVue = __webpack_require__(143);
+
+	var _mdPanelCardVue2 = _interopRequireDefault(_mdPanelCardVue);
+
+	exports['default'] = {
+	    mdBasicCard: _mdBasicCardVue2['default'],
+	    mdCardAction: _mdCardActionVue2['default'],
+	    mdCardContent: _mdCardContentVue2['default'],
+	    mdCardImg: _mdCardImgVue2['default'],
+	    mdCardReveal: _mdCardRevealVue2['default'],
+	    mdCardTitle: _mdCardTitleVue2['default'],
+	    mdImageCard: _mdImageCardVue2['default'],
+	    mdPanelCard: _mdPanelCardVue2['default']
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 121 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(122)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(136)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-basic-card.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-basic-card.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-basic-card.vue"], function () {
+	var newOptions = require("-!babel!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-basic-card.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-basic-card.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 122 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _mixinsCardMixinJs = __webpack_require__(123);
+
+	exports['default'] = {
+	    mixins: [_mixinsCardMixinJs.basic]
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _cardMdCardActionVue = __webpack_require__(124);
+
+	var _cardMdCardActionVue2 = _interopRequireDefault(_cardMdCardActionVue);
+
+	var _cardMdCardContentVue = __webpack_require__(127);
+
+	var _cardMdCardContentVue2 = _interopRequireDefault(_cardMdCardContentVue);
+
+	var _cardMdCardImgVue = __webpack_require__(130);
+
+	var _cardMdCardImgVue2 = _interopRequireDefault(_cardMdCardImgVue);
+
+	var _cardMdCardTitleVue = __webpack_require__(133);
+
+	var _cardMdCardTitleVue2 = _interopRequireDefault(_cardMdCardTitleVue);
+
+	exports['default'] = {
+
+	    basic: {
+	        props: {
+	            options: Object,
+	            reveal: Boolean
+	        },
+	        components: {
+	            'md-card-action': _cardMdCardActionVue2['default'],
+	            'md-card-content': _cardMdCardContentVue2['default'],
+	            'md-card-title': _cardMdCardTitleVue2['default'],
+	            'md-card-img': _cardMdCardImgVue2['default']
+	        }
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(125)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(126)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-action.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-action.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-action.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-action.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-action.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 125 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    props: {
+	        links: Array
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 126 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card-action\">\n    <slot name=\"links\">\n        <a v-for=\"link in links\"  :href=\"link.href\">{{link.text}}</a>\n    </slot>\n</div>";
+
+/***/ },
+/* 127 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(128)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(129)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-content.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-content.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-content.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-content.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-content.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 128 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports["default"] = {};
+	module.exports = exports["default"];
+
+/***/ },
+/* 129 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card-content\">  \n    <slot name=\"title\"></slot>\n    <p><slot></slot></p>\n</div>";
+
+/***/ },
+/* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(131)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(132)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-img.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-img.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-img.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-img.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-img.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _mixinsCommonMixinJs = __webpack_require__(62);
+
+	exports['default'] = {
+	    props: {
+	        reveal: Boolean,
+	        imgSrc: String
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 132 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card-image\">\n    <img :src=\"imgSrc\" :class=\"{'activator':reveal}\">\n    <slot name=\"title\"></slot>      \n</div>";
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(134)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(135)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-title.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-title.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-title.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-title.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-title.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 134 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    props: {
+	        reveal: Boolean
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 135 */
+/***/ function(module, exports) {
+
+	module.exports = "<span :class=\"['card-title',reveal?'activator':'']\">\n    <slot></slot>\n    <slot name=\"icon\"></slot>\n</span>";
+
+/***/ },
+/* 136 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card\">\n        <md-card-content :class=\"options.content.class\">\n            <md-card-title :class=\"options.title.class\"  slot=\"title\">\n            {{options.title.text}}\n            <i  v-if=\"reveal\"  slot=\"icon\" class=\"material-icons right\">more_vert</i>\n            </md-card-title>\n            <slot name=\"content\">\n                {{options.content.text}}     \n            </slot>\n        </md-card-content>\n        <md-card-action v-if=\"! reveal\" :links=\"options.links\" >\n            <slot name=\"links\"></slot>\n        </md-card-action>\n        <slot name=\"reveal\"></slot>    \n    </div>";
+
+/***/ },
+/* 137 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(138)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(139)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-reveal.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-reveal.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-reveal.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-card-reveal.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-card-reveal.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 138 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _interopRequireDefault = __webpack_require__(46)['default'];
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _mdCardTitleVue = __webpack_require__(133);
+
+	var _mdCardTitleVue2 = _interopRequireDefault(_mdCardTitleVue);
+
+	exports['default'] = {
+	    props: {
+	        options: Object
+	    },
+	    components: {
+	        'md-card-title': _mdCardTitleVue2['default']
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 139 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card-reveal\">\n  <md-card-title  :class=\"options.title.class\" reveal>\n        {{options.title.text}}\n        <i slot=\"icon\" class=\"material-icons right\" >close</i>\n  </md-card-title>\n  <slot name=\"reveal-content\">\n      <p :class=\"options.content.class\">{{options.content.text}}</p>\n  </slot>\n</div>";
+
+/***/ },
+/* 140 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(141)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(142)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-image-card.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-image-card.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-image-card.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-image-card.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-image-card.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 141 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _mixinsCardMixinJs = __webpack_require__(123);
+
+	exports['default'] = {
+	    mixins: [_mixinsCardMixinJs.basic]
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 142 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card\">\n    <md-card-img v-if=\"options.imgSrc\" :img-src=\"options.imgSrc\"  :reveal=\"reveal\">\n        <md-card-title v-if=\"! reveal\" slot=\"title\"  :class=\"options.title.class\">\n            {{options.title.text}}\n        </md-card-title>\n    </md-card-img>\n    <md-card-content  :class=\"options.content.class\">\n        <md-card-title v-if=\"reveal\" slot=\"title\"  :class=\"options.title.class\">\n            {{options.title.text}}\n             <i  slot=\"icon\" slot=\"icon\" class=\"material-icons right\">more_vert</i>\n        </md-card-title>\n        <slot name=\"content\">\n            {{options.content.text}}\n        </slot>\n    </md-card-content>\n    <md-card-action v-if=\"! reveal\":links=\"options.links\">\n        <slot name=\"links\"></slot>\n    </md-card-action> \n    <slot name=\"reveal\"></slot>\n</div>";
+
+/***/ },
+/* 143 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(144)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(145)
+	if (false) {
+	(function () {
+	var hotAPI = require("/home/elviskang/Desktop/material/vue-material/node_modules/vue-loader/node_modules/vue-hot-reload-api/index.js")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-panel-card.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-panel-card.vue","-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-panel-card.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime!./../../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./md-panel-card.vue")
+	var newTemplate = require("-!vue-html!./../../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./md-panel-card.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 144 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports["default"] = {
+	    props: {
+	        options: Object
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 145 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"card-panel\">\n    <span :class=\"options.class\">\n        <slot>\n                {{options.text}}\n        </slot>\n    </span>\n</div>";
 
 /***/ }
 /******/ ])
