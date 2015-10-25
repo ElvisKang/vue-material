@@ -8,7 +8,7 @@
 <section>
     <doc-item-title>Raised</doc-item-title>
     <doc-item-demo>
-        <md-btn id="haha">Button</md-btn>
+        <md-btn>Button</md-btn>
         <md-btn icon-text="code" icon-pos="right" class="green">Button</md-btn>
         <md-btn icon-text="code" class="yellow darken-1">Button</md-btn>
     </doc-item-demo>
@@ -17,7 +17,7 @@
     </doc-item-code>
 </section>
 <section>
-    <doc-item-title>Flat</doc-item-title>
+    <doc-item-title>Flat (without wave)</doc-item-title>
     <doc-item-demo>
         <md-btn  flat >Button</md-btn>
     </doc-item-demo>
@@ -35,9 +35,10 @@
     </doc-item-code>
 </section> 
 <section>
-    <doc-item-title>Fixed Action Button(unfinished)</doc-item-title>
+    <doc-item-title>Fixed Action Button (unfinished)</doc-item-title>
     <doc-item-demo>
-        <md-fab :pos="{right:'24px',bottom:'45px'}"  :main-btn="{class:'btn-large red',text:'code'}">
+        <md-fab  style="right:24px;bottom:45px">
+              <md-btn-f  slot="main" class="red btn-large" icon-text="code"></md-btn-f>
               <li> <md-btn-f class="pink" icon-text="insert_chart"></md-btn-f></li>
               <li> <md-btn-f class="yellow" icon-text="format_quote"></md-btn-f></li>
               <li> <md-btn-f class="green" icon-text="publish"></md-btn-f> </li>

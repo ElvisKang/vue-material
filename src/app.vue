@@ -18,14 +18,17 @@
                         <a v-link="{path:'/buttons'}">Buttons</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/footer'}">Footer</a>
+                        <a v-link="{path:'/cards'}">Cards</a>
                 </li>
                 <li>
+                        <a v-link="{path:'/footer'}">Footer</a>
+                </li>
+<!--                 <li>
                         <a v-link="{path:'/forms'}">Forms</a>
                 </li>
                 <li>
                         <a v-link="{path:'/navbar'}">Navbar</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </li>     

@@ -13,6 +13,9 @@ router.map({
     '/buttons': {
         component:Views.Buttons
     },
+    '/cards': {
+        component:Views.Cards
+    },
     '/footer':{
         component:Views.Footer
     },
