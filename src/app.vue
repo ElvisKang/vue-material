@@ -8,6 +8,9 @@
     <li class="bold">
         <a v-link="{path:'/about'}">About</a>
     </li>
+    <li class="bold">
+        <a v-link="{path:'/start'}">Getting Started</a>
+    </li>
     <li class="no-padding">
         <ul  class="collapsible collapsible-accordion">
        <li class="bold">
@@ -21,7 +24,13 @@
                         <a v-link="{path:'/cards'}">Cards</a>
                 </li>
                 <li>
+                        <a v-link="{path:'/chips'}">Chips</a>
+                </li>
+                <li>
                         <a v-link="{path:'/footer'}">Footer</a>
+                </li>
+                <li>
+                        <a v-link="{path:'/preloader'}">Preloader</a>
                 </li>
 <!--                 <li>
                         <a v-link="{path:'/forms'}">Forms</a>
@@ -73,5 +82,11 @@ export default {
 }
 #sidenav a.v-link-active {
     color: #41B883;
+}
+.doc-demo>*{
+    margin-right:3px;
+}
+nav {
+    background: #41B883;
 }
 </style>

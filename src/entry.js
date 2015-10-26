@@ -1,9 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueMaterial from './vue-material.min.js';
+import VueMaterial from 'vue-material';
+// import VueMaterial from './vue-material.min.js';
 import App from './app.vue';
 import Views from './views/index.js';
 VueMaterial.registerAll(Vue);
+// VueMaterial.register(Vue,['buttons','navbar'])
 Vue.use(VueRouter);
 var router = new VueRouter();
 router.map({
@@ -16,14 +18,23 @@ router.map({
     '/cards': {
         component:Views.Cards
     },
+    '/chips': {
+        component:Views.Chips
+    },
     '/footer':{
         component:Views.Footer
+    },
+    '/forms':{
+        component:Views.Forms
     },
     '/navbar':{
         component:Views.Navbar
     },
-    '/forms':{
-        component:Views.Forms
+    '/preloader':{
+        component:Views.Preloader
+    },
+    '/start':{
+        component:Views.Start
     }
 });
 router.beforeEach(function () {

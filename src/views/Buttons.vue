@@ -8,16 +8,17 @@
 <section>
     <doc-item-title>Raised</doc-item-title>
     <doc-item-demo>
-        <md-btn>Button</md-btn>
-        <md-btn icon-text="code" icon-pos="right" class="green">Button</md-btn>
-        <md-btn icon-text="code" class="yellow darken-1">Button</md-btn>
+        <md-btn @click="btnClick('Raised1')">Button</md-btn>
+        <md-btn icon-text="code" icon-pos="right" class="green" @click="btnClick('Raised2')">Button</md-btn>
+        <md-btn icon-text="code" icon-pos="left" class="yellow darken-1" @click="btnClick('Raised3')">Button</md-btn>
+        <p>Try to click button :{{clickedID}}</p>
     </doc-item-demo>
     <doc-item-code lang="markup" >
     {{codes.raised}}
     </doc-item-code>
 </section>
 <section>
-    <doc-item-title>Flat (without wave)</doc-item-title>
+    <doc-item-title>Flat</doc-item-title>
     <doc-item-demo>
         <md-btn  flat >Button</md-btn>
     </doc-item-demo>
@@ -28,21 +29,21 @@
 <section>
     <doc-item-title>Floating</doc-item-title>
     <doc-item-demo>
-        <md-btn-f  icon-text="code" class="red btn-large"></md-btn>
+        <md-btn float icon-text="code" class="red btn-large"></md-btn>
     </doc-item-demo>
     <doc-item-code lang="markup">
         {{codes.floating}}
     </doc-item-code>
 </section> 
 <section>
-    <doc-item-title>Fixed Action Button (unfinished)</doc-item-title>
+    <doc-item-title>Fixed Action Button</doc-item-title>
     <doc-item-demo>
         <md-fab  style="right:24px;bottom:45px">
-              <md-btn-f  slot="main" class="red btn-large" icon-text="code"></md-btn-f>
-              <li> <md-btn-f class="pink" icon-text="insert_chart"></md-btn-f></li>
-              <li> <md-btn-f class="yellow" icon-text="format_quote"></md-btn-f></li>
-              <li> <md-btn-f class="green" icon-text="publish"></md-btn-f> </li>
-              <li> <md-btn-f class="blue" icon-text="attach_file"></md-btn-f> </li>
+              <md-btn float slot="main" class="red btn-large" icon-text="code"></md-btn>
+              <md-btn float class="pink" icon-text="insert_chart"></md-btn>
+              <md-btn float class="yellow" icon-text="format_quote"></md-btn>
+              <md-btn float class="green" icon-text="publish"></md-btn>
+              <md-btn float class="blue" icon-text="attach_file"></md-btn>
         </md-fab>
     </doc-item-demo>
     <doc-item-code lang="markup">
@@ -54,7 +55,7 @@
     <doc-item-demo>
         <md-btn disabled>Button</md-btn>
         <md-btn flat disabled>Button</md-btn>
-        <md-btn-f  icon-text="code" class="red btn-large" disabled></md-btn>
+        <md-btn float  icon-text="code" class="red btn-large" disabled></md-btn>
     </doc-item-demo>
     <doc-item-code lang="markup" >
         {{codes.disabled}}
@@ -70,7 +71,8 @@ import codes from '../codes/Buttons.js';
 export default {
     mixins:[docView,hasCode],
     data(){
-        return {            
+        return {
+        clickedID:null,            
         logo:{
             href:"#!/buttons",
             text:"Buttons",
@@ -78,14 +80,11 @@ export default {
              },
              codes
         }
+    },
+    methods:{
+        btnClick(id){
+            this.clickedID=id;
+        }
     }
 }
 </script>
-<style>
-    .doc-demo>*{
-        margin-right:3px;
-    }
-    nav {
-        background: #41B883;
-    }
-</style>
