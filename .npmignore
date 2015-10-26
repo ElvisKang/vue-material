@@ -9,5 +9,3 @@ test
 *.md
 *.log
 bower.json
-dist/vue-material.min.js
-dist/vue-material.min.js.map

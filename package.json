@@ -1,8 +1,8 @@
 {
   "name": "vue-material",
-  "version": "0.0.3",
-  "description": "(Still Building)Material-design components built with pure Vue.js",
-  "main": "src/entry.js",
+  "version": "0.0.4",
+  "description": "Material-design components built with pure Vue.js",
+  "main": "dist/vue-material.min.js",
   "directories": {
     "test": "test"
   },

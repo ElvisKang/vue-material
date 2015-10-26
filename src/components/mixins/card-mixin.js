@@ -1,7 +1,7 @@
-import mdCardAction from '../card/md-card-action.vue';
-import mdCardContent from '../card/md-card-content.vue';
-import mdCardImg from '../card/md-card-img.vue';
-import mdCardTitle from '../card/md-card-title.vue';
+import mdCardAction from '../cards/md-card-action.vue';
+import mdCardContent from '../cards/md-card-content.vue';
+import mdCardImg from '../cards/md-card-img.vue';
+import mdCardTitle from '../cards/md-card-title.vue';
 export default {
 
     basic: {

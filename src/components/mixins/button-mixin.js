@@ -3,7 +3,7 @@ export default {
     btnIcon: {
         props: {
             iconText: String,
-            reveal:Boolean
+            iconPos:String
         },
         components: {
             "md-icon": mdIcon

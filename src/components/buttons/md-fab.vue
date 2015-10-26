@@ -18,7 +18,17 @@ export default {
         mouseEvent(){
             this.hover = !this.hover;
         }
-    }
+    },
+    ready(){
+        //wrap sub_buttons with li tag
+        let ul = this.$el.children[1];
+        let len = ul.children.length;
+        for(let i=0; i<len;i++) {
+            let li = document.createElement("li");
+            li.appendChild(ul.firstChild);
+            ul.appendChild(li);
+        }
+    },
 }
 </script>
 

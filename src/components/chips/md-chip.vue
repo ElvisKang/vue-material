@@ -9,6 +9,7 @@
 <script type="babel">
 import {hasImg} from '../mixins/common-mixin.js'
 export default {
+    mixins:[hasImg],
     props:{
         tag:Boolean
     }

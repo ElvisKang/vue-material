@@ -1,36 +1,40 @@
-import button from './components/button/index.js';
-import chip from './components/chip/index.js';
+import buttons from './components/buttons/index.js';
+import cards from './components/cards/index.js';
+import chips from './components/chips/index.js';
 import commons from './components/commons/index.js';
 import footer from './components/footer/index.js';
 import forms from './components/forms/index.js';
 import navbar from './components/navbar/index.js';
+import preloader from './components/preloader/index.js';
 import sidenav from './components/sidenav/index.js';
-import card from './components/card/index.js';
 /*
-import collection from './components/collection/index.js';
+import collections from './components/collections/index.js';
 import pagination from './components/pagination/index.js';
-import preloader from './components/preloader/index.js';*/
+*/
 
 
 export default {
     components: {
-        button,
-        card,
-        chip,
+        buttons,
+        cards,
+        chips,
         commons,
         footer,
         forms,
         navbar,
         sidenav,
+        preloader,
     },
     /*    
-        collection,
+        collections,
         pagination,
-        preloader,*/
+        */
     _registered: [],
     registerAll(Vue){
         for(let comName in this.components ) {
-            this._regComponent(Vue,comName);
+            if(this._registered.indexOf(comName) === -1){
+                this._regComponent(Vue,comName);
+            }
         }
     },
     register(Vue, names) {
