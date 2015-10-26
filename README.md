@@ -17,17 +17,21 @@ This project **doesn't** belong to Materializecss. I'd like to thank Alan Chang 
 
 ##Download
 
->npm install vue-material
+```bash
+npm install vue-material
+```
 
 ##Usage
 
->import Vue from 'vue';  
->import Material from 'vue-material';  
->//Globally register all of the components;  
->Material.registerAll(Vue);  
->//or  
->//Globally register the components that you need  
->Material.register(Vue,['button','card']);  
+```javascript
+import Vue from 'vue';
+import Material from 'vue-material';
+//Globally register all of the components;
+Material.registerAll(Vue);
+//or
+//Globally register the components that you need
+Material.register(Vue,['button','card']);
+```
 
 #介绍
 
