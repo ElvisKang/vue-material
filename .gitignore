@@ -32,5 +32,5 @@ node_modules
 doc/node_modules
 .vscode
 
-#gedit backup files
-*.*~
+#files
+src/vue-material.min.js

@@ -8,7 +8,7 @@
 <section>
     <doc-item-title>Raised</doc-item-title>
     <doc-item-demo>
-        <md-btn @click="btnClick('Raised1')">Raised1</md-btn>
+        <md-btn @click="btnClick('Raised1')" test="12">Raised1</md-btn>
         <md-btn icon-text="code" icon-pos="right" btn-text="Raised2" class="green" @click="btnClick('Raised2')" ></md-btn>
         <md-btn icon-text="code" icon-pos="left" class="yellow" @click="btnClick('Raised3')"></md-btn>
         <p>Clicked Button ID :{{clickedID}}</p>

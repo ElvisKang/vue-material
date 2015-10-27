@@ -12,8 +12,8 @@ let flashing = `
 <md-circular class="small" colors="blue red yellow green"></md-circular>
 `
 let deter=`
-<md-progress percent="80"></md-progress>
-<md-progress  class="red lighten-4" bar-color="red" percent="80"></md-progress>
+<md-progress :percent="80"></md-progress>
+<md-progress  class="red lighten-4" bar-color="red" :percent="80"></md-progress>
 `
 let indeter = `
 <md-progress ></md-progress>

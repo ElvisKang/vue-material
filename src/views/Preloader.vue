@@ -8,8 +8,8 @@
     <section>
         <doc-item-title>Determinate</doc-item-title>
         <doc-item-demo>
-            <md-progress percent="80"></md-progress>
-            <md-progress  class="red lighten-4" bar-color="red" percent="80"></md-progress>
+            <md-progress :percent="80"></md-progress>
+            <md-progress  class="red lighten-4" bar-color="red" :percent="80"></md-progress>
         </doc-item-demo>
         <doc-item-code lang="markup">
             {{codes.deter}}
