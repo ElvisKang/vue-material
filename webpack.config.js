@@ -32,6 +32,5 @@ module.exports = {
                 warnings: false
             }
         })
-    ],
-    devtool: 'source-map'
+    ]
 }
