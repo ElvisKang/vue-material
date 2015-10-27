@@ -6,7 +6,10 @@
 <div class="container">
 <article id="navbar">
     <section>
-        <p>Coming soon</p>
+        <doc-item-title>Basic</doc-item-title>
+        <doc-item-demo>
+            <md-nav></md-nav>
+        </doc-item-demo>
     </section>
 </article>
 </template>

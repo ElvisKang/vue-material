@@ -8,10 +8,10 @@
 <section>
     <doc-item-title>Raised</doc-item-title>
     <doc-item-demo>
-        <md-btn @click="btnClick('Raised1')">Button</md-btn>
-        <md-btn icon-text="code" icon-pos="right" class="green" @click="btnClick('Raised2')">Button</md-btn>
-        <md-btn icon-text="code" icon-pos="left" class="yellow darken-1" @click="btnClick('Raised3')">Button</md-btn>
-        <p>Try to click button :{{clickedID}}</p>
+        <md-btn @click="btnClick('Raised1')">Raised1</md-btn>
+        <md-btn icon-text="code" icon-pos="right" btn-text="Raised2" class="green" @click="btnClick('Raised2')" ></md-btn>
+        <md-btn icon-text="code" icon-pos="left" class="yellow" @click="btnClick('Raised3')"></md-btn>
+        <p>Clicked Button ID :{{clickedID}}</p>
     </doc-item-demo>
     <doc-item-code lang="markup" >
     {{codes.raised}}

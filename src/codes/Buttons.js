@@ -1,13 +1,12 @@
 let Button={
         raised:`
-<md-btn @click="btnClick('Raised1')">Button</md-btn>
-<md-btn icon-text="code" icon-pos="right" class="green" @click="btnClick('Raised2')">Button</md-btn>
-<md-btn icon-text="code" icon-pos="left" class="yellow darken-1" @click="btnClick('Raised3')">Button</md-btn>
-<p>Try to click button :{{clickedID}}</p>`,
+<md-btn @click="btnClick('Raised1')">Raised1</md-btn>
+<md-btn icon-text="code" icon-pos="right" btn-text="Raised2" class="green" @click="btnClick('Raised2')" ></md-btn>
+<md-btn icon-text="code" icon-pos="left" class="yellow" @click="btnClick('Raised3')"></md-btn>`,
         flat:`
 <md-btn  flat >Button</md-btn>`,
         floating:`
-<md-btn-f  icon-text="code" class="red btn-large"></md-btn>`,
+<md-btn floating icon-text="code" class="red btn-large"></md-btn>`,
         disabled:`
 <md-btn disabled>Button</md-btn>
 <md-btn flat disabled>Button</md-btn>

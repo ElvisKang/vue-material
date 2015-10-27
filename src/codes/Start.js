@@ -1,9 +1,8 @@
-let install=`
-npm install vue-material`;
+let install=`npm install vue-material`;
 
 let use =`
-import Vue from 'vue';
-import Material from 'vue-material';
+import Vue from 'vue'; 
+import Material from 'vue-material'; 
 //Globally register all of the components;
 Material.registerAll(Vue);
 //or

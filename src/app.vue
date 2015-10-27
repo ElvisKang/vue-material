@@ -30,14 +30,14 @@
                         <a v-link="{path:'/footer'}">Footer</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/preloader'}">Preloader</a>
-                </li>
-<!--                 <li>
                         <a v-link="{path:'/forms'}">Forms</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/navbar'}">Navbar</a>
-                </li> -->
+                        <a v-link="{path:'/preloader'}">Preloader</a>
+                </li>
+<!--                 <li>
+        <a v-link="{path:'/navbar'}">Navbar</a>
+</li> -->
             </ul>
         </div>
     </li>     

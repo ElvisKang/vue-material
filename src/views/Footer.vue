@@ -6,37 +6,21 @@
 <div class="container">
 <article id="footer">
     <section>
-    <doc-item-title>Basic</doc-item-title> 
+    <doc-item-title>Basic</doc-item-title>
         <doc-item-demo>
             <md-footer class="green">
-                <md-footer-content slot="main" class="col s12 l6" :options="demo1.content"></md-footer-content>
-                <md-footer-links slot="main" class="col s12 l6" :options="demo1.links"></md-footer-links>
-                <md-footer-copyright slot="copyright" :options="demo1.copr"></md-footer-copyright>
-            </md-footer>
-        </doc-item-demo>
-        <doc-item-code lang="markup">
-            {{codes.demo1.code}}
-        </doc-item-code> 
-        <doc-item-code lang="javascript">
-            {{codes.demo1.options}}
-        </doc-item-code>   
-    </section>
-    <section>
-    <doc-item-title>Customized with Slot</doc-item-title>
-        <doc-item-demo>
-            <md-footer class="red">
                 <md-footer-content slot="main" class="col s12 l4">
                         <p>Another Content</p>
-                        <h5 slot="title">Title1</h5>
-                        <p slot="text" class="">Content</p>
-                        <md-btn class="yellow" >Code2</md-btn>
+                        <h5 slot="title" class="white-text">Title1</h5>
+                        <p slot="text" class="white-text">Content</p>
+                        <md-btn class="yellow darken-2" ></md-btn>
                 </md-footer-content>
                 <md-footer-content slot="main" class="col s12 l4">
                     <h5 slot="title">Title2</h5>
-                    <p slot="text" class="">Content2</p>
+                    <p slot="text" >Content2</p>
                 </md-footer-content>
                 <md-footer-links slot="main"  class="col s12 l4">
-                    <h5 slot="title" class="white-text">Title3</h5>
+                    <h5 slot="title" class="white-text">Links</h5>
                     <ul slot="links">
                         <li><a href="#!/footer"  class="white-text">Footer</a></li>                
                     </ul>
@@ -49,6 +33,24 @@
         </doc-item-demo>
         <doc-item-code lang="markup">
             {{codes.demo2.code}}
+        </doc-item-code>   
+    </section>
+    <section>
+    <doc-item-title>Using Props</doc-item-title> 
+        <doc-item-demo>
+            <md-footer class="green">
+                <md-footer-content slot="main" class="col s12 l6" :options="demo1.content">
+                       <md-btn class="yellow darken-2" ></md-btn>
+                </md-footer-content>
+                <md-footer-links slot="main" class="col s12 l6" :options="demo1.links"></md-footer-links>
+                <md-footer-copyright slot="copyright" :options="demo1.copr"></md-footer-copyright>
+            </md-footer>
+        </doc-item-demo>
+        <doc-item-code lang="markup">
+            {{codes.demo1.code}}
+        </doc-item-code> 
+        <doc-item-code lang="javascript">
+            {{codes.demo1.options}}
         </doc-item-code>   
     </section>
 </article>
