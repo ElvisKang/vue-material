@@ -14,7 +14,6 @@
 <script type="babel">
 export default {
     props:{
-        fixed:Boolean,
         logo:Object,
         noLink:Boolean,
         linksPos:String
@@ -37,3 +36,11 @@ export default {
     }
 }
 </script>
+
+<style>
+ul.side-nav.fixed li a {
+    font-size: 13px;
+    line-height: 44px;
+    height: 44px;
+}        
+</style>

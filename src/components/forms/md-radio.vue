@@ -1,6 +1,6 @@
 <template>
-    <input :class="{'with-gap':gap}" :name="name" type="radio" :id="id" :disable="disable" />
-    <label :for="id">{{label}}</label>
+    <input :class="{'with-gap':gap}" :checked="checked" :value="value" :name="name" type="radio" :id="id" :disabled="disabled" />
+    <label :for="id"><slot></slot></label>
 </template>
 
 <script>

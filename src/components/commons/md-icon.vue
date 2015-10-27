@@ -1,5 +1,5 @@
 <template>
-    <i v-if="text" :class="['material-icons',pos]">{{text}}</i>
+    <i :class="['material-icons',pos]">{{text}}</i>
 </template>
 
 <script type="babel">

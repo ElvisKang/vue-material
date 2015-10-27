@@ -55,7 +55,6 @@ export default {
         for (let item in com) {
             let regName = this._camel2kebab(item);
             Vue.component(regName, com[item]);
-            console.log(regName);
         }
         this._registered.push(name);
     }

@@ -1,10 +1,14 @@
 <template>
 <div class="switch">
     <label>
-        {{offText}}
-        <input type="checkbox" :id="id" :name="name" :value="value" :checked="checked" :disabled="disabled" >
+        <slot name="off">
+        {{off}}
+        </slot>
+        <input type="checkbox" v-mobel="mdValue" :false-value="off" :true-value="on" :checked="checked" :disabled="disabled" >
         <span class="lever"></span> 
-        {{onText}}
+        <slot name="on">
+        {{on}}
+        </slot>
     </label>
 </div>
 </template>
@@ -14,11 +18,11 @@ import {basicAttr,status} from '../mixins/form-mixin.js';
 export default {
     mixins:[basicAttr,status],
     props:{
-        offText:{
+        off:{
             type:String,
             default:"off"
         },
-        onText:{
+        on:{
             type:String,
             default:"on"
         }

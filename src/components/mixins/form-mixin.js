@@ -1,14 +1,22 @@
 import {mdIcon}from '../commons/index.js';
 let basicAttr = {
-    replace: false,
     props: {
-        id: String,
-        name: String,
-        placeholder: String,
+        id: {
+            type:String,
+            default:''
+        },
+        name: {
+            type:String,
+            default:''
+        },
+        placeholder: {
+            type:String,
+            default:''
+        },
         value: {
             type:String,
-            twoWay:true
-        },
+            default:''
+        }
     }
 };
 let status = {
@@ -17,7 +25,7 @@ let status = {
         disabled: Boolean,
         required: Boolean,
     }
-}
+};
 let formIcon = {
     props: {
         iconText: String,
@@ -29,9 +37,18 @@ let formIcon = {
     components: {
         'md-icon': mdIcon
     }
-}
+};
+let actLabel = {
+    computed:{
+        labelActive(){
+                console.log("msg: "+this.mdValue);
+                return (this.mdValue || this.placeholder || this.focus);
+            }
+    },
+};
 export default {
     basicAttr,
     formIcon,
     status,
+    actLabel,
 }

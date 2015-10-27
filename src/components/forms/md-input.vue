@@ -1,17 +1,15 @@
 <template>
 <div class="input-field">
-        <slot name="icon">
-            <md-icon :icon="icon"></md-icon>
-        </slot>
-        <input :id="id" :name="name" :value="value?value:''" :placeholder="placeholder" :type="type"  :class="{'validate':validate}" :disabled="disabled" :required="required" @focus="focus=true" @blur="focus=false">
-        <label :for="id" :class="{'active':focus}"><slot></slot></label>
+        <md-icon v-if="iconText" :class="{'active':focus}" :text="iconText" :pos="iconPos"></md-icon>
+        <input v-model="mdValue" :id="id" v-el:input :name="name" :value="value" :placeholder="placeholder" :type="type" :disabled="disabled" :required="required" @focus="focus=true" @blur="focus=false" lazy>
+        <label :for="id" :class="{'active':labelActive}"><slot></slot></label>
 </div>
 </template>
 
 <script type="babel">
-import {basicAttr,status,formIcon} from '../mixins/form-mixin.js';
+import {basicAttr,status,formIcon,actLabel} from '../mixins/form-mixin.js';
 export default {
-    mixins:[basicAttr,formIcon,status],
+    mixins:[basicAttr,formIcon,status,actLabel],
     data(){
         return {
             focus:false
@@ -22,23 +20,7 @@ export default {
             type:String,
             default:"text"
         },
-        validate:Boolean,
-        value:{
-                type:String
-        }
+        validate:Boolean
     },
-    computed:{
-        labelActive(){
-
-        }
-    },
-    ready(){
-        console.log(this.value);
-    },
-    watch:{
-        value(){
-            console.log(this.value);
-        }
-    }
 }
 </script>
