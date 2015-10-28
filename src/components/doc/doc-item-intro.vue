@@ -10,7 +10,7 @@
     }
 </script>
 
-<<style>
+<style>
     .doc-intro {
         color:#35495E;
     }

@@ -1,6 +1,6 @@
 <template>
 <header>
-    <md-nav  :logo="logo" nolink>
+    <md-nav  :logo="logo" no-link>
     </md-nav>
 </header>    
 <div class="container">
@@ -8,10 +8,10 @@
     <section>
         <doc-item-title>Download</doc-item-title>
         <doc-item-intro>
-            First of all, you need to download <a href="http://materializecss.com/getting-started.html">Materializecss</a> and <a href="vuejs.org">Vue.js(1.0.0+)</a>.
+            First of all, you need to download <a href="http://materializecss.com/getting-started.html">Materialize</a> and <a href="vuejs.org">Vue.js(1.0.0+)</a>.
         </doc-item-intro>
         <doc-item-intro>
-            After that , you can install vue-material with npm. 
+            After that ,  installing vue-material with npm. 
         </doc-item-intro>
         <doc-item-code>
             {{codes.install}}

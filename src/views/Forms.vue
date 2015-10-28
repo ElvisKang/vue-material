@@ -1,15 +1,25 @@
 <template>
 <header>
-    <md-nav class="doc-nav" :logo="logo" nolink>
+    <md-nav class="doc-nav" :logo="logo" no-link>
     </md-nav>
 </header>    
 <div class="container">
-<article>
-    <section>
+<!-- <doc-toc>
+    <li><a href="#forms-input">Input</a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+</doc-toc> -->
+<article id="forms">
+    <section id="forms-input">
         <doc-item-title>Input</doc-item-title>
         <doc-item-demo>
             <div class="row">
-                    <md-input class="col s12 l6"  name="text1" id="text-input1" placeholder="First Name">First Name</md-input>
+                    <md-input class="col s12 l6" name="text1" id="text-input1" placeholder="First Name">First Name</md-input>
                     <md-input class="col s12 l6"  name="text2"  id="text-input2" >Last Name</md-input>
             </div>
             <div class="row">
@@ -124,6 +134,29 @@
             {{codes.switches}}
         </doc-item-code>
     </section>
+    <section>
+        <doc-item-title>Data Binding(incomplete)</doc-item-title>
+        <doc-item-demo>
+            <div class="row">
+                    <md-input class="col s12 l6" v-md-model="bindings.firstname" name="firstname" id="firstname" >First Name</md-input>
+                    <md-input class="col s12 l6" v-md-model="bindings.lastname" name="lastname"  id="lastname" >Last Name</md-input>
+            </div>
+<!--             <div class="row">
+                    <md-radio v-md-model="bindings.sex" value="man" id="man" name="sex" @click="change('msg')">Man</md-radio>
+                    <md-radio v-md-model="bindings.sex" value="Woman" id="woman" name="sex">Woman</md-radio>
+            </div> -->
+            <div class="row">
+                <md-textarea class="col s12" v-md-model="bindings.words" icon-text="mode_edit" id="words" placeholder="Say something..." >Textarea</md-input>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>Hello! {{bindings.firstname}} {{bindings.lastname}}</p>
+                    <!-- <p>You are a {{bindings.sex}}</p> -->
+                    <p>You said: {{bindings.words}}</p>
+                </div>
+            </div>
+        </doc-item-demo>
+    </section>
 </article>
 </div>
 </template>
@@ -135,6 +168,11 @@
         mixins:[docView,hasCode],
         data(){
             return {
+                bindings:{
+                    firstname:null,
+                    lastname:null,
+                    words:null
+                },
                 bool:true,
                 logo:{
                     href:"#!/forms",
@@ -142,6 +180,11 @@
                     pos:"center"
                 },
                 codes
+            }
+        },
+        methods:{
+            change(){
+                console.log("changed");
             }
         }
     }

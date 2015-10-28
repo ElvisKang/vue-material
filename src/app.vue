@@ -35,9 +35,9 @@
                 <li>
                         <a v-link="{path:'/preloader'}">Preloader</a>
                 </li>
-<!--                 <li>
-        <a v-link="{path:'/navbar'}">Navbar</a>
-</li> -->
+                <li>
+                        <a v-link="{path:'/navbar'}">Navbar</a>
+                </li>
             </ul>
         </div>
     </li>     

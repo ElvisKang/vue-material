@@ -7,7 +7,8 @@ export default {
             'doc-item-demo':docItem.docItemDemo,
             'doc-item-intro':docItem.docItemIntro,
             'doc-item-options':docItem.docItemOptions,
-            'doc-item-title':docItem.docItemTitle
+            'doc-item-title':docItem.docItemTitle,
+            'doc-toc':docItem.docToc,
         }    
     },
     hasCode:{

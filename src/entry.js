@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueMaterial from 'vue-material';
-// import VueMaterial from './vue-material.min.js';
+// import VueMaterial from 'vue-material';
+import VueMaterial from './vue-material.min.js';
 import App from './app.vue';
 import Views from './views/index.js';
-VueMaterial.registerAll(Vue);
+VueMaterial.regAll(Vue);
 // VueMaterial.register(Vue,['buttons','navbar'])
 Vue.use(VueRouter);
 var router = new VueRouter();

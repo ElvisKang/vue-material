@@ -1,6 +1,6 @@
 <template>
 <header>
-    <md-nav  :logo="logo" nolink>
+    <md-nav  :logo="logo" no-link>
     </md-nav>
 </header>    
 <div class="container">

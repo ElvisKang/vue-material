@@ -34,3 +34,4 @@ doc/node_modules
 
 #files
 src/vue-material.min.js
+static/bundle.js.map

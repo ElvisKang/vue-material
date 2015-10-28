@@ -3,6 +3,7 @@ import docItemDemo from './doc-item-demo.vue';
 import docItemIntro from './doc-item-intro.vue';
 import docItemOptions from './doc-item-options.vue';
 import docItemTitle from './doc-item-title.vue';
+import docToc from './doc-toc.vue';
 
 export default {
     docItemCode,
@@ -10,4 +11,5 @@ export default {
     docItemIntro,
     docItemOptions,
     docItemTitle,
+    docToc,
 }
