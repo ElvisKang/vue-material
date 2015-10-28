@@ -1,13 +1,14 @@
 <template>
 <div :class="{'fixed-action-btn':true,'active':hover}" @mouseover="mouseEvent" @mouseout="mouseEvent">
     <slot name="main"></slot>
-    <ul v-show="hover">
+    <ul v-el:ul v-show="hover">
         <slot></slot>
     </ul>
 </div>
 </template>
 
 <script type="babel">
+import wrap from '../utils/wrap-children.js';
 export default {
     data(){
         return {
@@ -21,14 +22,8 @@ export default {
     },
     ready(){
         //wrap sub_buttons with li tag
-        let ul = this.$el.children[1];
-        // let children = Array.from(ul.children);
-        let len = ul.children.length;
-        for(let i=0; i<len;i++) {
-            let li = document.createElement("li");
-            li.appendChild(ul.children[0]);
-            ul.appendChild(li);
-        }
+        let ul = this.$els.ul;
+        wrap(ul,"li");
     },
 }
 </script>

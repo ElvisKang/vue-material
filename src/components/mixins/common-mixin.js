@@ -1,8 +1,18 @@
+import mdIcon from '../commons/md-icon.vue';
 export default {
-    hasImg: {
+    hasIcon: {
         props: {
-            imgSrc: String,
-            imgAlt: String
+            iconText: String,
+            iconPos:String
+        },
+        components: {
+            "md-icon": mdIcon
+        }
+    },
+    hasImg:{
+        props:{
+            imgSrc:String,
+            imgAlt:String
         }
     }
 }

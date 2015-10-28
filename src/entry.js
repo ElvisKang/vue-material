@@ -11,6 +11,7 @@ import sidenav from './components/sidenav/index.js';
 import collections from './components/collections/index.js';
 import pagination from './components/pagination/index.js';
 */
+import directives from './directives/index.js';
 
 
 export default {
@@ -29,19 +30,29 @@ export default {
         collections,
         pagination,
         */
+    directives,
     _registered: [],
-    registerAll(Vue){
+    regAll(Vue){
         for(let comName in this.components ) {
             if(this._registered.indexOf(comName) === -1){
                 this._regComponent(Vue,comName);
             }
         }
+        this.regAllDirectives(Vue);
     },
-    register(Vue, names) {
+    reg(Vue, names) {
         for (let name of names) {
             name = name.toLowerCase();
             if ((name in this.components) && (this._registered.indexOf(name) === -1)) {
                 this._regComponent(Vue, name);
+            }
+        }
+        this.regAllDirectives(Vue);
+    },
+    regAllDirectives(Vue){
+        for(let dirName in this.directives){
+            if(this._registered.indexOf(dirName) === -1){
+                this._regDirective(Vue,dirName);
             }
         }
     },
@@ -56,6 +67,12 @@ export default {
             let regName = this._camel2kebab(item);
             Vue.component(regName, com[item]);
         }
+        this._registered.push(name);
+    },
+    _regDirective(Vue,name){
+        let obj = this.directives[name];
+        name = this._camel2kebab(name);
+        Vue.directive(name,obj);
         this._registered.push(name);
     }
 }

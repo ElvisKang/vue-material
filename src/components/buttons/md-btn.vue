@@ -9,9 +9,9 @@
 </template>
 
 <script lang="babel">
-import {btnIcon} from '../mixins/button-mixin.js';
+import {hasIcon} from '../mixins/common-mixin.js';
 export default {
-    mixins:[btnIcon],
+    mixins:[hasIcon],
     props:{
             btnText:{
                 type:String,

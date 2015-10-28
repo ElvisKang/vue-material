@@ -1,38 +1,40 @@
 <template>
 <nav>
       <div class="nav-wrapper">
-        <md-nav-logo :href="logo.href" :text="logo.text" :pos="logo.pos">
-            <slot name="logo"></slot>
-        </md-nav-logo>
-        <ul v-if="noLink" :class="[linksPos]">
-            <slot></slot> 
-        </ul>
+            <a :href="logo.href" :class="['brand-logo',logo.pos]">
+                <slot name="logo">
+                    {{logo.text}}
+                </slot>
+            </a>
+            <ul v-el:ul v-if="!noLink" :class="[linksPos]">
+                <slot></slot> 
+            </ul>        
       </div>
 </nav>
 </template>
 
 <script type="babel">
+import wrap from '../utils/wrap-children.js';
 export default {
     props:{
         logo:Object,
         noLink:Boolean,
-        linksPos:String
-/*        logoText:String,
-        logoPos:{
+        linksPos:String,
+        hide:{
             type:String,
-            default:"right",
-        },
-        logoHref:{
-            type:String,
-            default:"#"
-        }*/
+        }
     },
     created(){
             //check logo
             //logo.pos can be empty
             let logo= this.logo;
             logo.href = logo.href || "#";
-
+    },
+    ready(){
+        if(!this.noLink){
+            let ul = this.$els.ul;
+            wrap(ul,"li");
+        }
     }
 }
 </script>
