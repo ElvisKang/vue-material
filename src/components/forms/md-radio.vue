@@ -1,6 +1,8 @@
 <template>
-    <input :class="{'with-gap':gap}" v-model="mdValue" :checked="checked" :value="value" :name="name" type="radio" :id="id" :disabled="disabled" />
+<span>
+    <input type="radio" v-model="mdValue" :class="{'with-gap':gap}" :value="value" :name="name" :id="id" :checked="checked" :disabled="disabled"/>
     <label :for="id"><slot></slot></label>
+</span>
 </template>
 
 <script>

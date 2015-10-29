@@ -17,6 +17,12 @@
 import {basicAttr,status} from '../mixins/form-mixin.js';
 export default {
     mixins:[basicAttr,status],
+    data(){
+        return {
+            trueValue:"",
+            falseValue:""
+        }
+    }
     props:{
         off:{
             type:String,
@@ -25,7 +31,8 @@ export default {
         on:{
             type:String,
             default:"on"
-        }
+        },
+        value:{}
     }
 }
 </script>

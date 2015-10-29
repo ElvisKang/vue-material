@@ -1,6 +1,8 @@
 <template>
+<span>
       <input type="checkbox" :id="id" :class="{'filled-in':filled}" :name="name" :checked="checked" :disabled="disabled" />
       <label :for="id"><slot></slot></label>
+</span>
 </template>
 
 <script type="babel">

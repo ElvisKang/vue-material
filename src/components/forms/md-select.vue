@@ -1,9 +1,11 @@
 <template>
+<div class="input-field">
     <select :id="id" :class="{'browser-default':browserDefault}" :required="required" :disabled="disabled">
       <option :value="defaultValue" disabled selected>{{title}}</option>
       <option v-for="option in options" :value="option.value">{{option.text}}</option>
     </select>
-    <label :for="id">{{label}}</label>    
+    <label :for="id">{{label}}</label>
+</div>    
 </template>
 
 <script type="babel">
