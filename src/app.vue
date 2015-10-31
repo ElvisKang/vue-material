@@ -21,7 +21,7 @@
                         <a v-link="{path:'/buttons'}">Buttons</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/cards'}">Cards</a>
+                        <a v-link="{path:'/cards'}">Cards(incomplete)</a>
                 </li>
                 <li>
                         <a v-link="{path:'/chips'}">Chips</a>
@@ -36,7 +36,7 @@
                         <a v-link="{path:'/preloader'}">Preloader</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/navbar'}">Navbar</a>
+                        <a v-link="{path:'/navbar'}">Navbar(incomplete)</a>
                 </li>
             </ul>
         </div>

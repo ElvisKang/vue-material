@@ -50,26 +50,42 @@
         <doc-item-demo>
         <div class="row">
             <div class="col s12 l6">
-            <md-panel-card :options="options.panel" class="teal"></md-panel-card>
+            <md-card panel class="teal">
+                <span>I am good at containing small bits of information.</span>
+            </md-card>
             </div>
         </div>
         </doc-item-demo>         
         <!-- <doc-item-code></doc-item-code> -->
     </section>
     <section>
-        <doc-item-title>Reveal (incomplete)</doc-item-title>
+        <doc-item-title>Reveal</doc-item-title>
         <doc-item-demo>
             <div class="row">
                 <div class="col s12 l6">
-                    <md-basic-card reveal :options="options.basic">
-                        <md-card-reveal slot="reveal" :options="options.reveal"></md-card-reveal>
-                    </md-reveal-card>
+                    <md-card>
+                        <md-card-content>
+                            <md-card-title reveal class="black-text" icon-text="more_vert">Title</md-card-title>
+                            <p>I am good at containing small bits of information.</p>
+                        </md-card-content>
+                        <md-card-reveal>
+                            <md-card-title reveal icon-text="close">Reveal Title</md-card-title>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </md-card-reveal>
+                    </md-card>
                 </div>
                 <div class="col s12 l6">
-                    <md-image-card reveal :options="options.image">
-                        <p slot="content"><a href="#">This is a link</a></p>
-                        <md-card-reveal slot="reveal" :options="options.reveal"></md-card-reveal>
-                    </md-image-card>
+                    <md-card>
+                        <md-card-img src="static/images/doc/image_card.jpg">
+                        </md-card-img>
+                        <md-card-content>
+                            <md-card-title reveal class="black-text" icon-text="more_vert">Content Title</md-card-title>
+                            <p>I am good at containing small bits of information.</p>
+                        </md-card-content>
+                        <md-card-reveal>
+                            <md-card-title reveal icon-text="close">Reveal Title</md-card-title>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </md-card-reveal>
                 </div>
             </div>
         </doc-item-demo>

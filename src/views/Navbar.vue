@@ -65,7 +65,7 @@
             return {    
                 logo:{
                     href:"#!/navbar",
-                    text:"Navbar(incomplete)",
+                    text:"Navbar",
                     pos:"center"
                 },
                 // codes
