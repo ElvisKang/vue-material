@@ -1,18 +1,15 @@
 <template>
 <div class="card">
-    <md-card-img v-if="options.imgSrc" :img-src="options.imgSrc"  :reveal="reveal">
-        <md-card-title v-if="! reveal" slot="title"  :class="options.title.class">
+    <md-card-img v-if="options.imgSrc" :src="options.imgSrc"  :reveal="reveal">
+        <md-card-title v-if="! reveal" :class="options.title.class">
             {{options.title.text}}
         </md-card-title>
     </md-card-img>
     <md-card-content  :class="options.content.class">
-        <md-card-title v-if="reveal" slot="title"  :class="options.title.class">
+        <md-card-title v-if="reveal" :class="options.title.class">
             {{options.title.text}}
-             <i  slot="icon" slot="icon" class="material-icons right">more_vert</i>
         </md-card-title>
-        <slot name="content">
-            {{options.content.text}}
-        </slot>
+        <p>{{options.content.text}}</p>
     </md-card-content>
     <md-card-action v-if="! reveal":links="options.links">
         <slot name="links"></slot>

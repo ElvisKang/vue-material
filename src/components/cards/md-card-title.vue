@@ -1,7 +1,7 @@
 <template>
-<span :class="['card-title',reveal?'activator':'']">
+<span :class="{'card-title':true,'activator':reveal}">
     <slot></slot>
-    <slot name="icon"></slot>
+    <i  v-if="reveal"  slot="icon" class="material-icons right">more_vert</i>
 </span>
 </template>
 
