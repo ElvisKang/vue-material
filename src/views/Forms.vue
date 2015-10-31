@@ -4,16 +4,6 @@
     </md-nav>
 </header>    
 <div class="container">
-<!-- <doc-toc>
-    <li><a href="#forms-input">Input</a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-</doc-toc> -->
 <article id="forms">
     <section id="forms-input">
         <doc-item-title>Input</doc-item-title>

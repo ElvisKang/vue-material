@@ -5,6 +5,7 @@ module.exports = {
     entry: './src/entry',
     output: {
         path: './static',
+        publicPath:"/vue-material/static/",
         filename: 'bundle.js'
     },
     module: {
@@ -19,7 +20,9 @@ module.exports = {
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel'
-        }, ]
+        }, 
+        { test: "\.(png|jpg)$", loader: "url-loader?limit=8192" }
+        ]
     },
     plugins: [
         new webpack.DefinePlugin({

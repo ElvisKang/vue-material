@@ -29,7 +29,7 @@
          <doc-item-title>Customized Logo</doc-item-title>
          <doc-item-demo>
             <md-nav :logo="{href:'#!/navbar',pos:'center'}" links-pos="right" class="white">
-                <img slot="logo" src="/static/images/materialize-150x75.png" height="50">
+                <md-icon slot="logo" text="code" class="green-text"></md-icon>
                 <md-a href="#!/navbar" class="green-text">About</md-a>
                 <md-a href="https://github.com/ElvisKang/vue-material" class="green-text active">Github</md-a>
             </md-nav>
@@ -43,7 +43,7 @@
         <doc-item-demo>
             <md-nav :logo="{href:'#!/navbar',text:'Logo'}" links-pos="right">
                 <md-a href="#!/navbar" icon-text="search"></md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material" icon-text="code"></md-a>
+                <md-a href="https://github.com/ElvisKang/vue-material"  icon-text="code"></md-a>
             </md-nav>
         </doc-item-demo>
         <doc-item-demo>

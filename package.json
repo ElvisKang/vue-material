@@ -17,7 +17,10 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "file-loader": "^0.8.4",
+    "url-loader": "^0.5.6"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack  --progress --hide-modules",
