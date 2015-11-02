@@ -1,11 +1,12 @@
 <template>
-    <button :class="[type,disabled?'disabled':'']">
-        <md-icon   v-if="(!flat && iconText)"  :text="iconText" :pos="iconPos"></md-icon>
+    <a :class="[btnType,disabled?'disabled':'',large?'btn-large':'']">
+       <slot name="icon">
+            <md-icon   v-if="(!flat && iconText)"  :text="iconText" :pos="iconPos"></md-icon>
+       </slot> 
         <slot>
-            {{btnText}}
+            {{label}}
         </slot>
-    </button>
-    </template>
+    </a>
 </template>
 
 <script lang="babel">
@@ -13,23 +14,24 @@ import {hasIcon} from '../mixins/common-mixin.js';
 export default {
     mixins:[hasIcon],
     props:{
-            btnText:{
+            label:{
                 type:String,
                 default:'Button'
             },
+            large:Boolean,
             disabled:Boolean,
-            flat:Boolean,
-            float:Boolean
+            type:String
         },
     computed:{
-        type(){
-            if(this.float){
-                return 'btn-floating';
-            }else if(this.flat){
-                return 'btn-flat';
-            }else {
-                return 'btn'
-            }
+        btnType(){
+           switch(this.type){
+                case 'floating' :
+                    return 'btn-floating';
+                case 'flat' :
+                    return 'btn-flat';
+                default :
+                    return 'btn'
+           }
         }
     }
 }
