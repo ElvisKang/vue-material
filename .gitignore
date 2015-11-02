@@ -31,6 +31,7 @@ node_modules
 #folders
 doc/node_modules
 .vscode
+dist
 
 #gedit backup files
 *.*~

@@ -1,12 +1,14 @@
 <template>
 <span :class="{'card-title':true,'activator':reveal}">
     <slot></slot>
-    <i  v-if="reveal"  slot="icon" class="material-icons right">more_vert</i>
+    <md-icon v-if="reveal" :text="" pos="right"></md-icon>
 </span>
 </template>
 
 <script type="babel">
+import {hasIcon} from '../mixins/common-mixin.js';
 export default {
+    mixins:[hasIcon],
     props:{
         reveal:Boolean
     }

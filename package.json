@@ -1,6 +1,6 @@
 {
   "name": "vue-material",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Material-design components built with pure Vue.js",
   "main": "dist/vue-material.min.js",
   "directories": {
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack  --config build/webpack.build.dev.config.js & webpack   --config build/webpack.build.prod.config.js",
     "doc": "webpack --watch --config build/webpack.dev.js",
-    "pub":"npm run build && npm publish"
+    "pub": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -38,5 +38,7 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-waves": "^0.7.4"
+  }
 }

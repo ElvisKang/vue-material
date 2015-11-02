@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-.fixed-action-btn.active>ul button {
+.fixed-action-btn.active>ul a {
     opacity: 1;
 }
 </style>

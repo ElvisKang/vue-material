@@ -1,7 +1,7 @@
 <template>
     <a :class="[btnType,disabled?'disabled':'',large?'btn-large':'']">
        <slot name="icon">
-            <md-icon   v-if="(!flat && iconText)"  :text="iconText" :pos="iconPos"></md-icon>
+            <md-icon   v-if="showIcon"  :text="iconText" :pos="iconPos"></md-icon>
        </slot> 
         <slot>
             {{label}}
@@ -16,7 +16,7 @@ export default {
     props:{
             label:{
                 type:String,
-                default:'Button'
+                default:""
             },
             large:Boolean,
             disabled:Boolean,
@@ -32,6 +32,9 @@ export default {
                 default :
                     return 'btn'
            }
+        },
+        showIcon(){
+            return (this.type !== 'flat' && this.iconText);
         }
     }
 }
