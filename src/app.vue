@@ -83,7 +83,7 @@ export default {
 #sidenav a.v-link-active {
     color: #41B883;
 }
-.doc-demo>*{
+.doc-demo>*, .doc-demo>p>*{
     margin-right:3px;
 }
 nav {

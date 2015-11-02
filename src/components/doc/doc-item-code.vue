@@ -1,6 +1,6 @@
 <template>
 <pre>
-    <code :class="lang">
+    <code :class="'language-'+lang">
         <slot></slot>
     </code>
 </pre>
@@ -11,9 +11,6 @@ export default {
     props:{
         lang:String,
         code:String
-    },
-    created(){
-        this.lang=`language-${this.lang}`;
     }
 }
 </script>
