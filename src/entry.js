@@ -27,6 +27,9 @@ router.map({
     '/forms':{
         component:Views.Forms
     },
+    '/lists':{
+        component:Views.Lists
+    },
     '/navbar':{
         component:Views.Navbar
     },

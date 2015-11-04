@@ -33,6 +33,9 @@
                         <a v-link="{path:'/forms'}">Forms</a>
                 </li>
                 <li>
+                        <a v-link="{path:'/lists'}">Lists</a>
+                </li>
+                <li>
                         <a v-link="{path:'/preloader'}">Preloader</a>
                 </li>
                 <li>

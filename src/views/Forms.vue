@@ -17,7 +17,7 @@
                     <md-input class="col s12 l6" value="I am not editable" id="disabled2" disabled>Disable</md-input>
             </div>
             <p>
-                    <md-btn :class="bool?'green':'red'" @click="bool=!bool" :btn-text="bool?'Enable':'Disable'"></md-btn>
+                    <md-btn :class="bool?'green':'red'" @click="bool=!bool" :label="bool?'Enable':'Disable'"></md-btn>
             </p>
         </doc-item-demo>
         <doc-item-code lang="markup">

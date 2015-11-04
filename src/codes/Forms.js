@@ -9,7 +9,7 @@ let input=`
 </div>
 <p>
     <!-- Default bool=true -->
-    <md-btn :class="bool?'green':'red'" @click="bool=!bool" :btn-text="bool?'Enable':'Disable'"></md-btn>
+    <md-btn :class="bool?'green':'red'" @click="bool=!bool" :label="bool?'Enable':'Disable'"></md-btn>
 </p>`;
 
 let prefilling=`
