@@ -7,8 +7,8 @@ import forms from './components/forms/index.js';
 import navbar from './components/navbar/index.js';
 import preloader from './components/preloader/index.js';
 import sidenav from './components/sidenav/index.js';
+import lists from './components/lists/index.js';
 /*
-import collections from './components/collections/index.js';
 import pagination from './components/pagination/index.js';
 */
 import directives from './directives/index.js';
@@ -25,9 +25,9 @@ export default {
         navbar,
         sidenav,
         preloader,
+        lists,
     },
     /*    
-        collections,
         pagination,
         */
     directives,
@@ -54,6 +54,12 @@ export default {
             if(this._registered.indexOf(dirName) === -1){
                 this._regDirective(Vue,dirName);
             }
+        }
+    },
+    getConstructor(name){
+        let result;
+        if(typeof name === "string"){
+            
         }
     },
     //mdXxYy=>md-xx-yy
