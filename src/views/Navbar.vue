@@ -10,16 +10,16 @@
         <doc-item-title>Basic</doc-item-title>
         <doc-item-demo>
             <md-nav :logo="{href:'#!/navbar',text:'Logo'}" links-pos="right">
-                <md-a href="#!/navbar">About</md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material">Github</md-a>
+                <a href="#!/navbar">About</a>
+                <a href="https://github.com/ElvisKang/vue-material">Github</a>
             </md-nav>
             <md-nav :logo="{href:'#!/navbar',text:'Logo',pos:'center'}" links-pos="right">
-                <md-a href="#!/navbar">About</md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material">Github</md-a>
+                <a href="#!/navbar">About</a>
+                <a href="https://github.com/ElvisKang/vue-material">Github</a>
             </md-nav>
             <md-nav :logo="{href:'#!/navbar',text:'Logo',pos:'right'}">
-                <md-a href="#!/navbar">About</md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material">Github</md-a>
+                <a href="#!/navbar">About</a>
+                <a href="https://github.com/ElvisKang/vue-material">Github</a>
             </md-nav>
         </doc-item-demo>
         <doc-item-code lang="markup">
@@ -30,8 +30,8 @@
          <doc-item-demo>
             <md-nav :logo="{href:'#!/navbar',pos:'center'}" links-pos="right" class="white">
                 <md-icon slot="logo" text="code" class="green-text"></md-icon>
-                <md-a href="#!/navbar" class="green-text">About</md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material" class="green-text active">Github</md-a>
+                <a href="#!/navbar" class="green-text">About</a>
+                <a href="https://github.com/ElvisKang/vue-material" class="green-text active">Github</a>
             </md-nav>
          </doc-item-demo>
          <doc-item-code lang="markup">
@@ -42,14 +42,24 @@
          <doc-item-title>Icon Links</doc-item-title>
         <doc-item-demo>
             <md-nav :logo="{href:'#!/navbar',text:'Logo'}" links-pos="right">
-                <md-a href="#!/navbar" icon-text="search"></md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material"  icon-text="code"></md-a>
+                <a href="#!/navbar">
+                    <md-icon text="search"></md-icon>
+                </a>
+                <a href="https://github.com/ElvisKang/vue-material">
+                    <md-icon text="code"></md-icon>
+                </a>
             </md-nav>
         </doc-item-demo>
         <doc-item-demo>
             <md-nav :logo="{href:'#!/navbar',text:'Logo'}" links-pos="right">
-                <md-a href="" icon-text="search" icon-pos="left">Search</md-a>
-                <md-a href="https://github.com/ElvisKang/vue-material" icon-text="code" icon-pos="right">Github</md-a>
+                <a href="">
+                    <md-icon text="search" pos="left"></md-icon>
+                    Search
+                </a>
+                <a href="https://github.com/ElvisKang/vue-material" icon-text="code" icon-pos="right">
+                    <md-icon text="code" pos="right"></md-icon>
+                    Github
+                </a>
             </md-nav>
         </doc-item-demo>
      </section>

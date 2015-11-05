@@ -18,6 +18,9 @@
         <div class="md-collapsible-body"  v-show="collapseStatus.components" >
             <ul>
                 <li>
+                        <a v-link="{path:'/badges'}">Badges</a>
+                </li>
+                <li>
                         <a v-link="{path:'/buttons'}">Buttons</a>
                 </li>
                 <li>

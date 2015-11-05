@@ -52,7 +52,7 @@
     <doc-item-title>Fixed Action Button</doc-item-title>
     <doc-item-demo>
         <md-fab  style="right:24px;bottom:45px">
-              <md-btn type="floating" large slot="main" class="red" icon-text="code"></md-btn>
+              <md-btn type="floating" large class="red" icon-text="code"></md-btn>
               <md-btn type="floating" class="pink" icon-text="insert_chart"></md-btn>
               <md-btn type="floating" class="yellow" icon-text="format_quote"></md-btn>
               <md-btn type="floating" class="green" icon-text="publish"></md-btn>

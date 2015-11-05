@@ -12,6 +12,9 @@ router.map({
     '/about':{
         component:Views.About
     },
+    '/badges': {
+        component:Views.Badges
+    },
     '/buttons': {
         component:Views.Buttons
     },

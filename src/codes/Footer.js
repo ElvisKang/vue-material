@@ -1,10 +1,10 @@
 let demo1={
     code:`
 <md-footer class="green">
-    <md-footer-content slot="main" class="col s12 l6" :options="demo1.content">
+    <md-footer-content  class="col s12 l6" :options="demo1.content">
        <md-btn class="yellow darken-2" ></md-btn>      
     </md-footer-content>
-    <md-footer-links slot="main" class="col s12 l6" :options="demo1.links"></md-footer-links>
+    <md-footer-links  class="col s12 l6" :options="demo1.links"></md-footer-links>
     <md-footer-copyright slot="copyright" :options="demo1.copr"></md-footer-copyright>
 </md-footer>`,
 
@@ -36,17 +36,17 @@ demo1:{
 let demo2={
     code:`
 <md-footer class="green">
-    <md-footer-content slot="main" class="col s12 l4">
+    <md-footer-content  class="col s12 l4">
             <p>Another Content</p>
             <h5 slot="title" class="white-text">Title1</h5>
             <p slot="text" class="white-text">Content</p>
             <md-btn class="yellow darken-2" ></md-btn>
     </md-footer-content>
-    <md-footer-content slot="main" class="col s12 l4">
+    <md-footer-content  class="col s12 l4">
         <h5 slot="title">Title2</h5>
         <p slot="text" >Content2</p>
     </md-footer-content>
-    <md-footer-links slot="main"  class="col s12 l4">
+    <md-footer-links   class="col s12 l4">
         <h5 slot="title" class="white-text">Links</h5>
         <ul slot="links">
             <li><a href="#!/footer"  class="white-text">Footer</a></li>                
