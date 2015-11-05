@@ -28,7 +28,7 @@ export default {
             //check logo
             //logo.pos can be empty
             let logo= this.logo;
-            logo.href = logo.href || "#";
+            logo.href = logo.href || "";
     },
     ready(){
         if(!this.noLink){

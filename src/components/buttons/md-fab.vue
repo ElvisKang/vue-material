@@ -1,6 +1,5 @@
 <template>
 <div :class="{'fixed-action-btn':true,'active':hover}" @mouseover="mouseEvent" @mouseout="mouseEvent">
-    <slot name="main"></slot>
     <ul v-el:ul v-show="hover">
         <slot></slot>
     </ul>
@@ -21,8 +20,8 @@ export default {
         }
     },
     ready(){
-        //wrap sub_buttons with li tag
         let ul = this.$els.ul;
+        this.$el.insertBefore(ul.children[0],ul);
         wrap(ul,"li");
     },
 }

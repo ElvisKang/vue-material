@@ -1,8 +1,8 @@
 <template>
     <footer class="page-footer">
         <div class="container">
-            <div class="row">
-                <slot  name="main"></slot>
+            <div v-el:row class="row">
+                <slot></slot>
             </div>
         </div>
         <slot name="copyright"></slot>
