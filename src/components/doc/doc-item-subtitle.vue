@@ -1,5 +1,5 @@
 <template>
-    <h2 class="doc-title" ><slot></slot></h2>
+    <h4 class="doc-subtitle" ><slot></slot></h4>
 </template>
 
 <script type="babel">
@@ -10,8 +10,7 @@ export default {
 </script>
 
 <style>
-    .doc-title {
+    .doc-subtitle {
         font-weight: 300;
-        color:#41b883;
     }
 </style>

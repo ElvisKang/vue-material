@@ -3,7 +3,6 @@ let Button={
 <p>
     <md-btn>Button</md-btn>
     <md-btn class="green" >Button</md-btn>
-    <md-btn class="yellow" label="Button" ></md-btn>
 </p>
 <p>
     <md-btn icon-text="code" icon-pos="right" >Button</md-btn>
@@ -22,7 +21,10 @@ let Button={
 <md-btn type="floating"  icon-text="code" class="red" ></md-btn>
 <md-btn type="floating" disabled icon-text="code" class="red" ></md-btn>`,
         fab:`
-<md-fab  style="right:24px;bottom:45px">
+<md-switch :text="['Vertical','Horizontal']" v-md-model="fabDirection"></md-switch>
+<br>
+<md-switch :text="['Hover','Click']" v-md-model="fabClickOnly"></md-switch>
+<md-fab :horizontal="fabDirection" :click-only="fabClickOnly" style="right:24px;bottom:45px">
       <md-btn type="floating" large class="red" icon-text="code"></md-btn>
       <md-btn type="floating" class="pink" icon-text="insert_chart"></md-btn>
       <md-btn type="floating" class="yellow" icon-text="format_quote"></md-btn>

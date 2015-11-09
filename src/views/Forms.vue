@@ -17,7 +17,7 @@
                     <md-input class="col s12 l6" value="I am not editable" id="disabled2" disabled>Disable</md-input>
             </div>
             <p>
-                    <md-btn :class="bool?'green':'red'" @click="bool=!bool" :label="bool?'Enable':'Disable'"></md-btn>
+                    <md-btn :class="bool?'green':'red'" @click="bool=!bool">{{bool?'Enable':'Disable'}}</md-btn>
             </p>
         </doc-item-demo>
         <doc-item-code lang="markup">
@@ -104,21 +104,16 @@
     <section>
         <doc-item-title>Switches</doc-item-title>
         <doc-item-demo>
-            <p>
                 <md-switch></md-switch>
-            </p>
-            <p>
-                <md-switch on="open" off="close" checked></md-switch>
-            </p>
-            <p>
+                <br>
+                <md-switch :text="['left','right']" checked></md-switch>
+                <br>
                 <md-switch disabled></md-switch>
-            </p>
-            <p>
+                <br>
                 <md-switch>
-                    <span class="red-text" slot="off">off</span>
-                    <span class="green-text" slot="on">on</span>
+                    <span class="red-text" slot="off">close</span>
+                    <span class="green-text" slot="on">open</span>
                 </md-switch>
-            </p>
         </doc-item-demo>
         <doc-item-code lang="markup">
             {{codes.switches}}

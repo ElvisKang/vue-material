@@ -15,6 +15,9 @@ router.map({
     '/badges': {
         component:Views.Badges
     },
+    '/breadcrumbs': {
+        component:Views.Breadcrumbs
+    },
     '/buttons': {
         component:Views.Buttons
     },

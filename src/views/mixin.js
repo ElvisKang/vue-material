@@ -1,4 +1,4 @@
-import docItem from '../components/doc/index.js';
+import docItem from '../components/doc/';
 import Prism from '../prism.js';
 export default {
     docView:{
@@ -8,6 +8,7 @@ export default {
             'doc-item-intro':docItem.docItemIntro,
             'doc-item-options':docItem.docItemOptions,
             'doc-item-title':docItem.docItemTitle,
+            'doc-item-subtitle':docItem.docItemSubtitle,
             'doc-toc':docItem.docToc,
         }    
     },

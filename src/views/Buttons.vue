@@ -9,9 +9,8 @@
     <doc-item-title>Raised</doc-item-title>
     <doc-item-demo>
         <p>
-            <md-btn>Button</md-btn>
+            <md-btn class="waves-effect waves-light">Button</md-btn>
             <md-btn class="green" >Button</md-btn>
-            <md-btn class="yellow" label="Button" ></md-btn>
         </p>
         <p>
             <md-btn icon-text="code" icon-pos="right" >Button</md-btn>
@@ -51,7 +50,10 @@
 <section>
     <doc-item-title>Fixed Action Button</doc-item-title>
     <doc-item-demo>
-        <md-fab  style="right:24px;bottom:45px">
+        <md-switch :text="['Vertical','Horizontal']" v-md-model="fabDirection"></md-switch>
+        <br>
+        <md-switch :text="['Hover','Click']" v-md-model="fabClickOnly"></md-switch>
+        <md-fab :horizontal="fabDirection" :click-only="fabClickOnly" style="right:24px;bottom:45px">
               <md-btn type="floating" large class="red" icon-text="code"></md-btn>
               <md-btn type="floating" class="pink" icon-text="insert_chart"></md-btn>
               <md-btn type="floating" class="yellow" icon-text="format_quote"></md-btn>
@@ -70,18 +72,25 @@
 <script lang="babel">
 import {docView,hasCode} from './mixin.js';
 import codes from '../codes/Buttons.js';
+import md from '../vue-material.min.js';
 export default {
     mixins:[docView,hasCode],
     data(){
         return {
-        clickedID:null,            
-        logo:{
-            href:"#!/buttons",
-            text:"Buttons",
-            pos:"center"
-             },
+            fabDirection:false,
+            fabClickOnly:false,
+            clickedID:null,            
+            logo:{
+                href:"#!/buttons",
+                text:"Buttons",
+                pos:"center"
+                 },
              codes
         }
+    },
+    ready(){
+        // md.waves.attach('.waves-effect');
+        // md.waves.init();
     }
 }
 </script>

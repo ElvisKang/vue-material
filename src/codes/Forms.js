@@ -37,11 +37,11 @@ let checkbox=`
 
 let switches = `
 <md-switch></md-switch>
-<md-switch on="open" off="close" checked></md-switch>
+<md-switch :text="['left','right']" checked></md-switch>
 <md-switch disabled></md-switch>
 <md-switch>
-    <span class="red-text" slot="off">off</span>
-    <span class="green-text" slot="on">on</span>
+    <span class="red-text" slot="off">close</span>
+    <span class="green-text" slot="on">open</span>
 </md-switch>`;
 
 let textarea=`

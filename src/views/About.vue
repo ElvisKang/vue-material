@@ -13,7 +13,7 @@
     <section id="introduce">
         <h2>Introduction</h2>
         <p>
-            Vue-Material intends to build <a href="http://materializecss.com/">Materialize(0.97.1+)</a> with pure <a href="http://vuejs.org/">Vue.js(1.0.0+)</a> ,which let users get rid of depending on 3rd Javascript libraries ,such as Materialize.js and Jquery.js(with plugins). 
+            Vue-Material intends to build <a href="http://materializecss.com/">Materialize(0.97.2+)</a> with pure <a href="http://vuejs.org/">Vue.js(1.0.0+)</a> ,which let users get rid of depending on 3rd Javascript libraries ,such as Materialize.js and Jquery.js(with plugins). 
         </p>
     </section>
         <section id="status">

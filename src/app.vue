@@ -21,6 +21,9 @@
                         <a v-link="{path:'/badges'}">Badges</a>
                 </li>
                 <li>
+                        <a v-link="{path:'/breadcrumbs'}">Breadcrumbs</a>
+                </li>   
+                <li>
                         <a v-link="{path:'/buttons'}">Buttons</a>
                 </li>
                 <li>
