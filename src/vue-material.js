@@ -1,18 +1,20 @@
-import buttons from './components/buttons/index.js';
-import cards from './components/cards/index.js';
-import chips from './components/chips/index.js';
-import commons from './components/commons/index.js';
-import footer from './components/footer/index.js';
-import forms from './components/forms/index.js';
-import navbar from './components/navbar/index.js';
-import preloader from './components/preloader/index.js';
-import sidenav from './components/sidenav/index.js';
-import lists from './components/lists/index.js';
+import buttons from './components/buttons/';
+import cards from './components/cards/';
+import chips from './components/chips/';
+import commons from './components/commons/';
+import crumb from './components/crumb';
+import footer from './components/footer/';
+import forms from './components/forms/';
+import lists from './components/lists/';
+import navbar from './components/navbar/';
+import preloader from './components/preloader/';
+import sidenav from './components/sidenav/';
 /*
-import pagination from './components/pagination/index.js';
+import pagination from './components/pagination/';
 */
-import directives from './directives/index.js';
+import directives from './directives/';
 
+import waves from 'node-waves';
 
 export default {
     components: {
@@ -20,6 +22,7 @@ export default {
         cards,
         chips,
         commons,
+        crumb,
         footer,
         forms,
         navbar,
@@ -27,6 +30,7 @@ export default {
         preloader,
         lists,
     },
+    waves,
     /*    
         pagination,
         */

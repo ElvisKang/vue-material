@@ -1,6 +1,6 @@
 <template>
-<div :class="{'fixed-action-btn':true,'active':hover}" @mouseover="mouseEvent" @mouseout="mouseEvent">
-    <ul v-el:ul v-show="hover">
+<div v-el:container :class="{'fixed-action-btn':true,'active':showSubs,'horizontal':horizontal}">
+    <ul v-el:ul v-show="showSubs">
         <slot></slot>
     </ul>
 </div>
@@ -11,19 +11,50 @@ import wrap from '../utils/wrap-children.js';
 export default {
     data(){
         return {
-            hover:false
+            showSubs:false,
+            mainBtn:null
         }
     },
+    props:{
+        clickOnly:Boolean,
+        horizontal:Boolean
+    },
     methods:{
-        mouseEvent(){
-            this.hover = !this.hover;
+        toggleSubs(){
+            this.showSubs = !this.showSubs;
+        },
+        bindEvent(isClick){
+            this.showSubs=false;
+            this.unbindEvent();
+            if(isClick){
+                this.mainBtn.addEventListener('click',this.toggleSubs);
+            }else{
+                this.$els.container.addEventListener('mouseover',this.toggleSubs);
+                this.$els.container.addEventListener('mouseout',this.toggleSubs);
+            }
+        },
+        unbindEvent(){
+            this.mainBtn.removeEventListener('click',this.toggleSubs);
+            this.$els.container.removeEventListener('mouseover',this.toggleSubs);
+            this.$els.container.removeEventListener('mouseout',this.toggleSubs);
+        }
+    },
+    watch:{
+        clickOnly(v){
+            this.bindEvent(v);
         }
     },
     ready(){
         let ul = this.$els.ul;
-        this.$el.insertBefore(ul.children[0],ul);
+        this.mainBtn = ul.children[0];
+        this.$el.insertBefore(this.mainBtn,ul);
         wrap(ul,"li");
+
+        this.bindEvent(this.clickOnly);
     },
+    beforeDestroy(){
+        this.unbindEvent();
+    }
 }
 </script>
 

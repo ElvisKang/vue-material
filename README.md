@@ -2,7 +2,7 @@
 
 # Introduction
 
-Vue-material intends to build [Materialize(0.97.1+)](http://materializecss.com/) with pure [Vue.js(1.0.0+)](http://vuejs.org/) ,which let users get rid of depending on 3rd Javascript libraries ,such as Materialize.js and Jquery.js(with plugins).In addition,I hope that you will construct a material design website easier with vue-material.
+Vue-material intends to build [Materialize(0.97.2+)](http://materializecss.com/) with pure [Vue.js(1.0.0+)](http://vuejs.org/) ,which let users get rid of depending on 3rd Javascript libraries ,such as Materialize.js and Jquery.js(with plugins).In addition,I hope that you will construct a material design website easier with vue-material.
 
 # Status
 

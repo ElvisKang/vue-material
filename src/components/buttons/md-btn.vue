@@ -4,7 +4,6 @@
             <md-icon   v-if="showIcon"  :text="iconText" :pos="iconPos"></md-icon>
        </slot> 
         <slot>
-            {{label}}
         </slot>
     </a>
 </template>
@@ -14,10 +13,6 @@ import {hasIcon} from '../mixins/common-mixin.js';
 export default {
     mixins:[hasIcon],
     props:{
-            label:{
-                type:String,
-                default:""
-            },
             large:Boolean,
             disabled:Boolean,
             type:String

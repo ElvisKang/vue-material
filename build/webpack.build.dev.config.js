@@ -2,7 +2,7 @@ var config = require('./webpack.config.js');
 var webpack = require('webpack')
 
 module.exports = {
-    entry: './src/entry',
+    entry: './src/vue-material',
     output: {
         path: './dist',
         filename: 'vue-material.js',
