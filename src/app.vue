@@ -27,7 +27,7 @@
                         <a v-link="{path:'/buttons'}">Buttons</a>
                 </li>
                 <li>
-                        <a v-link="{path:'/cards'}">Cards(incomplete)</a>
+                        <a v-link="{path:'/cards'}">Cards</a>
                 </li>
                 <li>
                         <a v-link="{path:'/chips'}">Chips</a>
