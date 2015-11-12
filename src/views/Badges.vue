@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/badges" pos="center">Badges</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -9,16 +10,16 @@
         <doc-item-title>Lists</doc-item-title>
         <doc-item-demo>
             <md-list>
-                <md-list-item href="#!/lists">
+                <md-list-item href="#!/badges">
                     Item
                     <md-badge>1</md-badge>
                 </md-list-item>
-                <md-list-item href="#!/lists">Item</md-list-item>
-                <md-list-item href="#!/lists">
+                <md-list-item href="#!/badges">Item</md-list-item>
+                <md-list-item href="#!/badges">
                     Item
                     <md-badge new>14</md-badge>
                 </md-list-item>
-                <md-list-item href="#!/lists">Item</md-list-item>
+                <md-list-item href="#!/badges">Item</md-list-item>
             </md-list>
         </doc-item-demo>
         <doc-item-code lang="markup">
@@ -28,9 +29,12 @@
     <section>
         <doc-item-title>Navbar</doc-item-title>
         <doc-item-demo>
-            <md-nav :logo="{href:'#!/badges',text:'Logo'}" links-pos="right">
-                <a href="#!/badges">Message<md-badge new>14</md-badge></a>
-                <a href="https://github.com/ElvisKang/vue-material">Github</a>
+            <md-nav>
+                <md-nav-logo href="#!/badges">Logo</md-nav-logo>
+                <md-nav-links>
+                    <a href="#!/badges">Message<md-badge new>14</md-badge></a>
+                    <a href="https://github.com/ElvisKang/vue-material">Github</a>
+                </md-nav-links>
             </md-nav>
         </doc-item-demo>
         <doc-item-code lang="markup">
@@ -47,11 +51,6 @@
         mixins:[docView,hasCode],
         data(){
             return {    
-                logo:{
-                    href:"#!/badges",
-                    text:"Badges",
-                    pos:"center"
-                },
                 codes
             }
         }

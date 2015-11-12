@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/preloader" pos="center">Preloader</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">

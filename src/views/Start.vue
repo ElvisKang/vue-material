@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/start" pos="center">Getting Started</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -33,11 +34,6 @@
         mixins:[docView,hasCode],
         data(){
             return {
-                logo:{
-                    href:"#!/start",
-                    text:"Getting Started",
-                    pos:"center"
-                },
                 codes
             }
         }

@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/buttons" pos="center">Buttons</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -80,12 +81,7 @@ export default {
             fabDirection:false,
             fabClickOnly:false,
             clickedID:null,            
-            logo:{
-                href:"#!/buttons",
-                text:"Buttons",
-                pos:"center"
-                 },
-             codes
+            codes
         }
     },
     ready(){

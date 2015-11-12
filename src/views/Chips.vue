@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/chips" pos="center">Chips</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -34,11 +35,6 @@
         mixins:[docView,hasCode],
         data(){
             return {    
-                logo:{
-                    href:"#!/chips",
-                    text:"Chips",
-                    pos:"center"
-                },
                 codes
             }
         }

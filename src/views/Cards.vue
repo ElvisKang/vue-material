@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/cards" pos="center">Cards</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -93,10 +94,13 @@
                             <md-card-title reveal icon-text="close">Reveal Title</md-card-title>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                         </md-card-reveal>
+                    </md-card>
                 </div>
             </div>
         </doc-item-demo>
-        <!-- <doc-item-code></doc-item-code> -->
+        <doc-item-code lang="markup">
+            {{codes.reveal}}
+        </doc-item-code>
     </section>
 </article>
 </template>
@@ -108,11 +112,6 @@
         mixins:[docView,hasCode],
         data(){
             return {
-                logo:{
-                    href:"#!/cards",
-                    text:"Card",
-                    pos:"center"
-                },
                 options:{
                     basic:{
                         title:{

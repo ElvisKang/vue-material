@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav class="doc-nav" :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/forms" pos="center">Forms</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -156,11 +157,6 @@
                 bindings:{
                 },
                 bool:true,
-                logo:{
-                    href:"#!/forms",
-                    text:"Forms",
-                    pos:"center"
-                },
                 codes
             }
         }

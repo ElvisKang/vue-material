@@ -13,9 +13,12 @@ let lists = `
 </md-list>`;
 
 let navbar = `
-<md-nav :logo="{href:'#!/badges',text:'Logo'}" links-pos="right">
-    <a href="#!/badges">Message<md-badge new>14</md-badge></a>
-    <a href="https://github.com/ElvisKang/vue-material">Github</a>
+<md-nav>
+    <md-nav-logo href="#!/badges">Logo</md-nav-logo>
+    <md-nav-links>
+        <a href="#!/badges">Message<md-badge new>14</md-badge></a>
+        <a href="https://github.com/ElvisKang/vue-material">Github</a>
+    </md-nav-links>
 </md-nav>`;
 
 export default {

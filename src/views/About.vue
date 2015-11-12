@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav fixed :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/about" pos="center">About</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -35,15 +36,7 @@
 
 <script lang="babel">
 export default {
-    data(){
-        return {            
-        logo:{
-            href:"#!/about",
-            text:"About",
-            pos:"center"
-             }
-        }
-    }
+
 }
 </script>
 <style>

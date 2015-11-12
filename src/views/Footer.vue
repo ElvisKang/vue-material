@@ -1,6 +1,7 @@
 <template>
 <header>
-    <md-nav  :logo="logo" no-link>
+    <md-nav>
+        <md-nav-logo href="#!/footer" pos="center">Footer</md-nav-logo>
     </md-nav>
 </header>    
 <div class="container">
@@ -63,11 +64,6 @@
         mixins:[docView,hasCode],
         data(){
             return {
-                logo:{
-                    href:"#!/footer",
-                    text:"Footer",
-                    pos:"center"
-                },
                 codes,
                 demo1:{
                     content:{
