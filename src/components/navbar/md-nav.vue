@@ -1,51 +1,31 @@
 <template>
-<md-nav-wrapper :class="class">
-    <a :href="logo.href" :class="['brand-logo',logo.pos]">
-        <slot name="logo">
-            {{logo.text}}
-        </slot>
-    </a>
-    <ul v-el:ul v-if="!noLink" :class="[linksPos]">
-        <slot></slot> 
-    </ul>        
-</md-nav-wrapper>
+<nav>
+    <div class="nav-wrapper">
+        <slot></slot>
+    </div>
+</nav>
 </template>
 
 <script type="babel">
-import wrap from '../utils/wrap-children.js';
-import mdNavWrapper from './md-nav-wrapper.vue';
 export default {
     props:{
-        class:String,
-        logo:Object,
-        noLink:Boolean,
-        linksPos:String,
-        hide:{
-            type:String,
-        }
-    },
-    components:{
-        'md-nav-wrapper':mdNavWrapper
-    },
-    created(){
-            //check logo
-            //logo.pos can be empty
-            let logo= this.logo;
-            logo.href = logo.href || "";
+        fixed:Boolean
     },
     ready(){
-        if(!this.noLink){
-            let ul = this.$els.ul;
-            wrap(ul,"li");
+        if(this.fixed){
+            let el = this.$el
+            let parentNode = el.parentNode;
+            let div=document.createElement("div");
+            div.className="navbar-fixed";
+            parentNode.insertBefore(div,el)
+            div.appendChild(el);
         }
     }
 }
 </script>
 
 <style>
-ul.side-nav.fixed li a {
-    font-size: 13px;
-    line-height: 44px;
-    height: 44px;
-}        
+    .brand-logo.left {
+        left:0.5rem;
+    }
 </style>

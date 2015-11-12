@@ -15,3 +15,11 @@ export default {
     }
 }
 </script>
+
+<style>
+    .side-nav.fixed li a {
+        font-size: 13px;
+        line-height: 44px;
+        height: 44px;
+    }     
+</style>
