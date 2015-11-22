@@ -10,10 +10,6 @@ module.exports = {
         libraryTarget: 'umd'
     },
     module:config.module,
-    babel:{
-        cacheDirectory:true,
-        presets: ['es2015']
-    },
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {

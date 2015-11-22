@@ -17,7 +17,7 @@ import pagination from './components/pagination/';
 import waves from 'node-waves';
 */
 
-Material = {
+export default {
     components: {
         buttons,
         cards,
@@ -35,7 +35,6 @@ Material = {
     _registered: [],
     regAll(Vue){
         for(let comName in this.components ) {
-            console.log(comName)
             if(this._registered.indexOf(comName) === -1){
                 this._regComponent(Vue,comName);
             }
@@ -70,12 +69,10 @@ Material = {
         return str.replace(reg, '-').toLowerCase();
     },
     _regComponent(Vue, name) {
-        console.log(this.components[name]);
         let com = this.components[name];
         for (let item in com) {
             let regName = this._camel2kebab(item);
             Vue.component(regName, com[item]);
-            console.log(regName);
         }
         this._registered.push(name);
     },
@@ -86,8 +83,6 @@ Material = {
         this._registered.push(name);
     }
     
-};
-
-export default Material;
+}
 
 

@@ -10,7 +10,6 @@ module.exports = {
         libraryTarget: 'umd'
     },
     module:config.module,
-    babel:config.babel,
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
