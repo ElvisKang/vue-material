@@ -1,8 +1,8 @@
 <template>
-<p class="range-field">
-    <input  @mouseup="mouseEvent" @mousedown="mouseEvent" @type="range" :step="step" :value="value" :min="min" :max="max" v-model="rangeValue"/>
-    <span  v-show="showThumb" class="thumb" :style="thumbStyle" style="left: 289.344px; height: 0px; width: 0px; top: 10px; margin-left: -6px;"><span class="value">{{rangeValue}}</span></span>
-</p>
+    <span>
+        <input  @mouseup="mouseEvent" @mousedown="mouseEvent" @type="range" :step="step" :value="value" :min="min" :max="max" v-model="rangeValue"/>
+        <span  v-show="showThumb" class="thumb" :style="thumbStyle" style="left: 289.344px; height: 0px; width: 0px; top: 10px; margin-left: -6px;"><span class="value">{{rangeValue}}</span></span>
+    </span>
 </template>
 
 <script type="babel">

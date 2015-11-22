@@ -6,7 +6,7 @@
 </div>
 </template>
 
-<script type="babel">
+<script>
 import wrap from '../utils/wrap-children.js';
 export default {
     data(){

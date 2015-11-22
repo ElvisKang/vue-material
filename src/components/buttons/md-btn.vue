@@ -8,7 +8,7 @@
     </a>
 </template>
 
-<script lang="babel">
+<script>
 import {hasIcon} from '../mixins/common-mixin.js';
 export default {
     mixins:[hasIcon],

@@ -4,15 +4,18 @@
   </button>
 </template>
 
-<script lang="babel">
+<script type="babel">
 import {basicAttr,status} from '../mixins/form-mixin.js';
-export default {
+export  default {
     mixins:[basicAttr,status],
     props:{
-        btnText:{
-          type:String,
-          default:"Submit"
-        }
+        defaultValue:{
+            type:String,
+            default:""
+        },
+        browserDefault:Boolean,
+        options:Object,
+        title:String
     }
 }
 </script>

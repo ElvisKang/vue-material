@@ -4,7 +4,7 @@
     </span>
 </template>
 
-<script lang="babel">
+<script type="babel">
 export default {
     props:{
         new:Boolean,
