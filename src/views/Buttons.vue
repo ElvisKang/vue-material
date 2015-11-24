@@ -73,7 +73,6 @@
 <script lang="babel">
 import {docView,hasCode} from './mixin.js';
 import codes from '../codes/Buttons.js';
-import md from '../vue-material.min.js';
 export default {
     mixins:[docView,hasCode],
     data(){
@@ -83,10 +82,6 @@ export default {
             clickedID:null,            
             codes
         }
-    },
-    ready(){
-        // md.waves.attach('.waves-effect');
-        // md.waves.init();
     }
 }
 </script>

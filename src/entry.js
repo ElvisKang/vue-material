@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 // import VueMaterial from 'vue-material';
-import VueMaterial from './vue-material.min.js';
+import VueMaterial from './vue-material.js';
 import App from './app.vue';
 import Views from './views/index.js';
 VueMaterial.regAll(Vue);

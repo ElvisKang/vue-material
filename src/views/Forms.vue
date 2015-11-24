@@ -83,6 +83,16 @@
         </doc-item-code>
     </section>
     <section>
+        <doc-item-title>Range</doc-item-title>
+        <doc-item-demo>
+            <md-range id="range" v-md-model="rangeValue"></md-range>
+            <p>Range value : {{rangeValue}}</p>
+        </doc-item-demo>
+        <doc-item-code lang="markup">
+            {{codes.range}}
+        </doc-item-code>
+    </section>
+    <section>
         <doc-item-title>Checkboxes</doc-item-title>
         <doc-item-demo>
             <p>
