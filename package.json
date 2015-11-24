@@ -1,6 +1,6 @@
 {
   "name": "vue-material",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Material-design components built with pure Vue.js",
   "main": "dist/vue-material.js",
   "directories": {
