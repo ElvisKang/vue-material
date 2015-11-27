@@ -4,7 +4,7 @@
     </ul>      
 </template>
 <script type="babel">
-import wrap from '../utils/wrap-children.js';
+import {wrapChildren} from '../../utils/';
 export default {
     props:{
         pos:{
@@ -13,7 +13,7 @@ export default {
         }
     },
     ready(){
-        wrap(this.$el,"li");
+        wrapChildren(this.$el,"li");
     }
 }
 </script>

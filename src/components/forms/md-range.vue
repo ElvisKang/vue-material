@@ -42,7 +42,7 @@ export default {
     watch:{
         mdValue(value){
             let input = this.$els.input;
-            let left= (value*input.clientWidth/this.max)+'px';
+            let left= (value/(this.max-this.min)*input.clientWidth)+'px';
             this.$set('thumbStyle.left',left); 
         }
     }

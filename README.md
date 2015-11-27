@@ -8,6 +8,10 @@ Vue-material intends to build [Materialize(0.97.2+)](http://materializecss.com/)
 
 Still Under Building
 
+# Supported Browsers:
+
+Chrome 35+, Firefox 31+, Safari 7+, IE 10+
+
 # Documentation
 
 [Link](http://elviskang.github.io/vue-material/)

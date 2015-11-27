@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import wrap from '../utils/wrap-children.js';
+import {wrapChildren} from '../../utils/';
 export default {
     data(){
         return {
@@ -23,10 +23,10 @@ export default {
         toggleSubs(){
             this.showSubs = !this.showSubs;
         },
-        bindEvent(isClick){
+        bindEvent(isClickOnly){
             this.showSubs=false;
             this.unbindEvent();
-            if(isClick){
+            if(isClickOnly){
                 this.mainBtn.addEventListener('click',this.toggleSubs);
             }else{
                 this.$els.container.addEventListener('mouseover',this.toggleSubs);
@@ -46,11 +46,12 @@ export default {
     },
     ready(){
         let ul = this.$els.ul;
-        this.mainBtn = ul.children[0];
-        this.$el.insertBefore(this.mainBtn,ul);
-        wrap(ul,"li");
-
-        this.bindEvent(this.clickOnly);
+        if(ul.children.length>0){
+            this.mainBtn = ul.children[0];
+            this.$el.insertBefore(this.mainBtn,ul);
+            wrapChildren(ul,"li");
+            this.bindEvent(this.clickOnly);
+        }
     },
     beforeDestroy(){
         this.unbindEvent();
