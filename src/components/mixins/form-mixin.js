@@ -41,7 +41,6 @@ let formIcon = {
 let actLabel = {
     computed:{
         labelActive(){
-                console.log("msg: "+this.mdValue);
                 return (this.mdValue || this.placeholder || this.focus);
             }
     },

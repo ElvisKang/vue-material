@@ -1,3 +1,4 @@
+import badges from './components/badges/'
 import buttons from './components/buttons/';
 import cards from './components/cards/';
 import chips from './components/chips/';
@@ -19,6 +20,7 @@ import waves from 'node-waves';
 
 export default {
     components: {
+        badges,
         buttons,
         cards,
         chips,
