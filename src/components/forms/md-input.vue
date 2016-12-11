@@ -1,7 +1,7 @@
 <template>
 <div class="input-field">
         <md-icon v-if="iconText" :class="{'active':focus}" :text="iconText" :pos="iconPos"></md-icon>
-        <input v-model="mdValue" :id="id" v-el:input :name="name" :value="value" :placeholder="placeholder" :type="type" :disabled="disabled" :required="required" @focus="focus=true" @blur="focus=false" lazy>
+        <input v-model="mdValue" :id="id" v-el:input :name="name" :value="value" :placeholder="placeholder" :type="type" :disabled="disabled" :required="required" @input="$emit('input', $event)" @focus="focus=true; $emit('focus', $event)" @blur="focus=false; $emit('blur', $event)" lazy>
         <label :for="id" :class="{'active':labelActive}"><slot></slot></label>
 </div>
 </template>
