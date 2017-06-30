@@ -1,3 +1,8 @@
+# THIS REPO IS DEPRECATED
+
+Please Move To https://github.com/vuematerial/vue-material
+
+
 <p align="center"><a href="http://elviskang.github.io/vue-material" target="_blank"><img width="150"src="https://raw.githubusercontent.com/ElvisKang/vue-material/gh-pages/static/images/materialize-150x75.png"></a></p>
 
 # Introduction
@@ -43,20 +48,3 @@ Material.regAll(Vue);
 //Globally register the components that you need
 Material.reg(Vue,['buttons','cards']);
 ```
-
-# 介绍
-
-Vue-material的目标是借助Vue.js实现Materialize的所有功能,以帮助用户摆脱对于第三方javascript库的依赖。同时，我希望它能让你能更加轻松地构建一个Material Design页面。
-
-# 项目状态
-
-构建中。
-
-# 文档
-
-[链接](http://elviskang.github.io/vue-material/)
-
-# 声明&感谢
-
-该项目非Materializecss的官方项目。在此感谢Alan Chang准许我使用他们的logo！
-
