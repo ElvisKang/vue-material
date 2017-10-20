@@ -7,8 +7,6 @@ Please Move To https://github.com/vuematerial/vue-material
 
 # Introduction
 
-[![Join the chat at https://gitter.im/ElvisKang/vue-material](https://badges.gitter.im/ElvisKang/vue-material.svg)](https://gitter.im/ElvisKang/vue-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Vue-material intends to build [Materialize(0.97.2+)](http://materializecss.com/) with pure [Vue.js(1.0.0+)](http://vuejs.org/) ,which let users get rid of depending on 3rd Javascript libraries ,such as Materialize.js and Jquery.js(with plugins).In addition,I hope that you will construct a material design website easier with vue-material.
 
 # Status
